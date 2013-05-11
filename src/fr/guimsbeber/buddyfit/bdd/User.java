@@ -12,7 +12,7 @@ public class User {
 	private String firstname;
 	private String mail;
 	private int birthday; //Pour d'éventuelle manipulation de date
-	private String weight;
+	private float weight;
 	private float size;
 	private int sex; //0 femme 1 homme
 	private String password;
@@ -48,10 +48,10 @@ public class User {
 	public void setBirthday(int birthday) {
 		this.birthday = birthday;
 	}
-	public String getWeight() {
+	public float getWeight() {
 		return weight;
 	}
-	public void setWeight(String weight) {
+	public void setWeight(float weight) {
 		this.weight = weight;
 	}
 	public float getSize() {

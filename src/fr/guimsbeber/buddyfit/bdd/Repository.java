@@ -3,7 +3,7 @@ package fr.guimsbeber.buddyfit.bdd;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-public abstract class Repository implements IRepository<Object>{
+public abstract class Repository<T> implements IRepository<T>{
 	//BDD
 	protected SQLiteDatabase mBDD;
 	protected SQLiteOpenHelper mSQLOH;
