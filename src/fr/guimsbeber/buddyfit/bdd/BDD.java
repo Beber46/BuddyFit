@@ -19,15 +19,25 @@ public class BDD  extends SQLiteOpenHelper{
 	public static final String TN_USER = "User";//TN = Table Name
 
 	public static final String USER_COLUMN_ID = "ID";
+	public static final int USER_NUM_ID = 0;
 	public static final String USER_COLUMN_NAME = "NAME";
+	public static final int USER_NUM_NAME = 1;
 	public static final String USER_COLUMN_FIRSTNAME = "FIRSTNAME";
+	public static final int USER_NUM_FIRSTNAME = 2;
 	public static final String USER_COLUMN_MAIL = "MAIL";
+	public static final int USER_NUM_MAIL = 3;
 	public static final String USER_COLUMN_BIRTHDAY = "BIRTHDAY";
+	public static final int USER_NUM_BIRTHDAY = 4;
 	public static final String USER_COLUMN_WEIGHT = "WEIGHT";
+	public static final int USER_NUM_WEIGHT = 5;
 	public static final String USER_COLUMN_SIZE = "SIZE";
+	public static final int USER_NUM_SIZE = 6;
 	public static final String USER_COLUMN_SEX = "SEX";
+	public static final int USER_NUM_SEX = 7;
 	public static final String USER_COLUMN_PASSWORD = "PASSWORD";
+	public static final int USER_NUM_PASSWORD = 8;
 	public static final String USER_COLUMN_AVATAR = "AVATAR";
+	public static final int USER_NUM_AVATAR = 9;
 	
 	private static final String REQUETE_CREATION_USER = "CREATE TABLE "+TN_USER+" " +
 			"("+USER_COLUMN_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, "
