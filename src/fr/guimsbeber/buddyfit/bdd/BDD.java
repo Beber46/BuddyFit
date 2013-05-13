@@ -49,7 +49,157 @@ public class BDD  extends SQLiteOpenHelper{
 			+USER_COLUMN_SIZE+" REAL, "
 			+USER_COLUMN_SEX+" BLOB, "
 			+USER_COLUMN_PASSWORD+" TEXT NOT NULL, "
-			+USER_COLUMN_AVATAR+" TEXT, ";
+			+USER_COLUMN_AVATAR+" TEXT); ";
+	/**
+	 * Partie de la création de la table Program
+	 */
+	public static final String TN_PROGRAM = "Program";//TN = Table Name
+	
+	public static final String PROGRAM_COLUMN_ID = "ID";
+	public static final int PROGRAM_NUM_ID = 0;
+	public static final String PROGRAM_COLUMN_NAME = "NAME";
+	public static final int PROGRAM_NUM_NAME = 1;
+	public static final String PROGRAM_COLUMN_BEGINDATE = "BEGINDATE";
+	public static final int PROGRAM_NUM_BEGINDATE = 2;
+	public static final String PROGRAM_COLUMN_ENDDATE = "ENDDATE";
+	public static final int PROGRAM_NUM_ENDDATE = 3;
+	public static final String PROGRAM_COLUMN_DESCRIPTION = "DESCRIPTION";
+	public static final int PROGRAM_NUM_DESCRIPTION = 4;
+	
+	private static final String REQUETE_CREATION_PROGRAM = "CREATE TABLE "+TN_PROGRAM+" " +
+			"("+PROGRAM_COLUMN_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, "
+			+PROGRAM_COLUMN_NAME+" TEXT NOT NULL, "
+			+PROGRAM_COLUMN_BEGINDATE+" INTEGER NOT NULL, "
+			+PROGRAM_COLUMN_ENDDATE+" INTEGER NOT NULL, "
+			+PROGRAM_COLUMN_DESCRIPTION+" TEXT NOT NULL); ";
+	
+	/**
+	 * Partie de la création de la table session
+	 */
+	public static final String TN_SESSION = "Session";//TN = Table Name
+	
+	public static final String SESSION_COLUMN_ID = "ID";
+	public static final int SESSION_NUM_ID = 0;
+	public static final String SESSION_COLUMN_NAME = "NAME";
+	public static final int SESSION_NUM_NAME = 1;
+	public static final String SESSION_COLUMN_DESCRIPTION = "DESCRIPTION";
+	public static final int SESSION_NUM_DESCRIPTION = 2;
+	public static final String SESSION_COLUMN_ID_PROGRAM = "ID_PROGRAM";
+	public static final int SESSION_NUM_ID_PROGRAM = 3;
+	
+	private static final String REQUETE_CREATION_SESSION = "CREATE TABLE "+TN_SESSION+" " +
+			"("+SESSION_COLUMN_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, "
+			+SESSION_COLUMN_NAME+" TEXT NOT NULL, "
+			+SESSION_COLUMN_DESCRIPTION+" TEXT NOT NULL," +
+			SESSION_COLUMN_ID_PROGRAM+" INTEGER NOT NULL); ";
+	
+	/**
+	 * Partie de la création de la table category
+	 */
+	public static final String TN_CATEGORY = "Category";//TN = Table Name
+
+	public static final String CATEGORY_COLUMN_ID = "ID";
+	public static final int CATEGORY_NUM_ID = 0;
+	public static final String CATEGORY_COLUMN_NAME = "NAME";
+	public static final int CATEGORY_NUM_NAME = 1;
+	public static final String CATEGORY_COLUMN_DESCRIPTION = "DESCRIPTION";
+	public static final int CATEGORY_NUM_DESCRIPTION = 2;
+	
+	private static final String REQUETE_CREATION_CATEGORY = "CREATE TABLE "+TN_CATEGORY+" " +
+			"("+CATEGORY_COLUMN_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, "
+			+CATEGORY_COLUMN_NAME+" TEXT NOT NULL, "
+			+CATEGORY_COLUMN_DESCRIPTION+" TEXT NOT NULL); ";
+	
+	/**
+	 * Partie de la création de la table Subcategory
+	 */
+	public static final String TN_SUBCATEGORY = "SubCategory";//TN = Table Name
+	
+	public static final String SUBCATEGORY_COLUMN_ID = "ID";
+	public static final int SUBCATEGORY_NUM_ID = 0;
+	public static final String SUBCATEGORY_COLUMN_NAME = "NAME";
+	public static final int SUBCATEGORY_NUM_NAME = 1;
+	public static final String SUBCATEGORY_COLUMN_DESCRIPTION = "DESCRIPTION";
+	public static final int SUBCATEGORY_NUM_DESCRIPTION = 2;
+	public static final String SUBCATEGORY_COLUMN_ID_CATEGORY = "ID_CATEGORY";
+	public static final int SUBCATEGORY_NUM_ID_CATEGORY = 3;
+	
+	private static final String REQUETE_CREATION_SUBCATEGORY = "CREATE TABLE "+TN_SUBCATEGORY+" " +
+			"("+SUBCATEGORY_COLUMN_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, "
+			+SUBCATEGORY_COLUMN_NAME+" TEXT NOT NULL, "
+			+SUBCATEGORY_COLUMN_DESCRIPTION+" TEXT NOT NULL," +
+			SUBCATEGORY_COLUMN_ID_CATEGORY+" INTEGER NOT NULL); ";
+	
+	/**
+	 * Partie de la création de la table Exercice
+	 */
+	public static final String TN_EXERCICE = "Exercice";//TN = Table Name
+	
+	public static final String EXERCICE_COLUMN_ID = "ID";
+	public static final int EXERCICE_NUM_ID = 0;
+	public static final String EXERCICE_COLUMN_NAME = "NAME";
+	public static final int EXERCICE_NUM_NAME = 1;
+	public static final String EXERCICE_COLUMN_DESCRIPTION = "DESCRIPTION";
+	public static final int EXERCICE_NUM_DESCRIPTION = 2;
+	public static final String EXERCICE_COLUMN_ID_SUBCATEGORY = "ID_SUBCATEGORY";
+	public static final int EXERCICE_NUM_ID_SUBCATEGORY = 3;
+	public static final String EXERCICE_COLUMN_PICTURE = "ID_PICTURE";
+	public static final int EXERCICE_NUM_ID_PICTURE = 4;
+	
+	private static final String REQUETE_CREATION_EXERCICE = "CREATE TABLE "+TN_EXERCICE+" " +
+			"("+EXERCICE_COLUMN_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, "
+			+EXERCICE_COLUMN_NAME+" TEXT NOT NULL, "
+			+EXERCICE_COLUMN_DESCRIPTION+" TEXT NOT NULL," +
+			EXERCICE_COLUMN_ID_SUBCATEGORY+" INTEGER NOT NULL," +
+			EXERCICE_COLUMN_PICTURE+" TEXT); ";
+	
+	/**
+	 * Partie de la création de la table opération
+	 */
+	public static final String TN_OPERATION = "Operation";//TN = Table Name
+	
+	public static final String OPERATION_COLUMN_ID = "ID";
+	public static final int OPERATION_NUM_ID = 0;
+	public static final String OPERATION_COLUMN_NBSERIES = "NBSERIES";
+	public static final int OPERATION_NUM_NBSERIES = 1;
+	public static final String OPERATION_COLUMN_NBREPETITION = "NBREPETITION";
+	public static final int OPERATION_NUM_NBREPETITION = 2;
+	public static final String OPERATION_COLUMN_BURDEN = "BURDEN";//charge
+	public static final int OPERATION_NUM_BURDEN = 3;
+	public static final String OPERATION_COLUMN_DATEOP = "DATEOP";
+	public static final int OPERATION_NUM_DATEOP = 4;
+	public static final String OPERATION_COLUMN_ID_EXERCICE = "ID_EXERCICE";
+	public static final int OPERATION_NUM_ID_EXERCICE = 5;
+	
+	private static final String REQUETE_CREATION_OPERATION = "CREATE TABLE "+TN_OPERATION+" " +
+			"("+OPERATION_COLUMN_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, "
+			+OPERATION_COLUMN_NBSERIES+" INTEGER NOT NULL, "
+			+OPERATION_COLUMN_NBREPETITION+" INTEGER NOT NULL," +
+			OPERATION_COLUMN_BURDEN+" REAL," +
+			OPERATION_COLUMN_DATEOP+" INTEGER NOT NULL," +
+			OPERATION_COLUMN_ID_EXERCICE+" INTEGER NOT NULL); ";
+	
+	/**
+	 * Partie de la création de la table SessionExercice
+	 */
+	public static final String TN_SESSIONEXERCICE = "SessionExercice";
+	
+	public static final String SESSIONEXERCICE_COLUMN_ID_SESSION = "ID_SESSION";
+	public static final int SESSIONEXERCICE_NUM_ID_SESSION = 0;
+	public static final String SESSIONEXERCICE_COLUMN_ID_EXERCICE = "ID_EXERCICE";
+	public static final int SESSIONEXERCICE_NUM_ID_EXERCICE = 1;
+	public static final String SESSIONEXERCICE_COLUMN_POSITION = "POSITION";
+	public static final int SESSIONEXERCICE_NUM_POSITION = 2;
+	public static final String SESSIONEXERCICE_COLUMN_TIMEOUT = "TIMEOUT";//charge
+	public static final int SESSIONEXERCICE_NUM_TIMEOUT = 3;
+	
+	private static final String REQUETE_CREATION_SESSIONEXERCICE = "CREATE TABLE "+TN_SESSIONEXERCICE+" " +
+			"("+SESSIONEXERCICE_COLUMN_ID_SESSION+" INTEGER NOT NULL, "
+			+SESSIONEXERCICE_COLUMN_ID_EXERCICE+" INTEGER NOT NULL, "
+			+SESSIONEXERCICE_COLUMN_POSITION+" INTEGER NOT NULL," +
+			SESSIONEXERCICE_COLUMN_TIMEOUT+" REAL);";
+	
+	
 	/**
 	 * Constructeur provenant de l'héritage
 	 * @param context
@@ -66,6 +216,27 @@ public class BDD  extends SQLiteOpenHelper{
 		
 		//Création de la table user
 		db.execSQL(REQUETE_CREATION_USER);
+		
+		//Création de la table program
+		db.execSQL(REQUETE_CREATION_PROGRAM);
+		
+		//Création de la table session
+		db.execSQL(REQUETE_CREATION_SESSION);
+		
+		//Création de la table category
+		db.execSQL(REQUETE_CREATION_CATEGORY);
+		
+		//CRéation de la table subcategory
+		db.execSQL(REQUETE_CREATION_SUBCATEGORY);
+		
+		//Création de la table exercice
+		db.execSQL(REQUETE_CREATION_EXERCICE);
+		
+		//Créatin de la table opération
+		db.execSQL(REQUETE_CREATION_OPERATION);
+		
+		//Création de la table sessionexercice
+		db.execSQL(REQUETE_CREATION_SESSIONEXERCICE);
 	}
 
 	@Override
@@ -74,6 +245,13 @@ public class BDD  extends SQLiteOpenHelper{
 	    // table puis on la recrée
 	    if (newVersion > DATABASE_VERSION) {
 	        db.execSQL("DROP TABLE " + TN_USER + ";");
+	        db.execSQL("DROP TABLE " + TN_PROGRAM + ";");
+	        db.execSQL("DROP TABLE " + TN_SESSION + ";");
+	        db.execSQL("DROP TABLE " + TN_CATEGORY + ";");
+	        db.execSQL("DROP TABLE " + TN_SUBCATEGORY + ";");
+	        db.execSQL("DROP TABLE " + TN_EXERCICE + ";");
+	        db.execSQL("DROP TABLE " + TN_OPERATION + ";");
+	        db.execSQL("DROP TABLE " + TN_SESSIONEXERCICE+ ";");
 	        onCreate(db);
 	    }
 	}
