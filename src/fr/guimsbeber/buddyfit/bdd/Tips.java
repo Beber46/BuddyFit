@@ -8,7 +8,7 @@ package fr.guimsbeber.buddyfit.bdd;
 public class Tips {
 	private int id;
 	private String description;
-	private int id_exercice;
+	private int idExercice;
 	
 	public int getId() {
 		return id;
@@ -22,10 +22,10 @@ public class Tips {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public int getId_exercice() {
-		return id_exercice;
+	public int getIdExercice() {
+		return idExercice;
 	}
-	public void setId_exercice(int id_exercice) {
-		this.id_exercice = id_exercice;
+	public void setIdExercice(int idExercice) {
+		this.idExercice = idExercice;
 	}
 }

@@ -9,7 +9,7 @@ public class SubCategory {
 	private int id;
 	private String name;
 	private String description;
-	private int id_category;
+	private int idCategory;
 	
 	public int getId() {
 		return id;
@@ -29,10 +29,10 @@ public class SubCategory {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public int getId_category() {
-		return id_category;
+	public int getIdCategory() {
+		return idCategory;
 	}
-	public void setId_category(int id_category) {
-		this.id_category = id_category;
+	public void setIdCategory(int idCategory) {
+		this.idCategory = idCategory;
 	}
 }

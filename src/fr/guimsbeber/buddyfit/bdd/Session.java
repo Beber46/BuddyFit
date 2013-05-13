@@ -9,7 +9,7 @@ public class Session {
 	private int id;
 	private String name;
 	private String description;
-	private int id_program;
+	private int idProgram;
 	
 	public int getId() {
 		return id;
@@ -29,10 +29,10 @@ public class Session {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public int getId_program() {
-		return id_program;
+	public int getIdProgram() {
+		return idProgram;
 	}
-	public void setId_program(int id_program) {
-		this.id_program = id_program;
+	public void setIdProgram(int idProgram) {
+		this.idProgram = idProgram;
 	}
 }

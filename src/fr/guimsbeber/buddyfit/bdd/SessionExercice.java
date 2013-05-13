@@ -6,23 +6,11 @@ package fr.guimsbeber.buddyfit.bdd;
  *
  */
 public class SessionExercice {
-	private int id_session;
-	private int id_exercice;
+	private int idSession;
+	private int idExercice;
 	private int position;
 	private float timeout;
 	
-	public int getId_session() {
-		return id_session;
-	}
-	public void setId_session(int id_session) {
-		this.id_session = id_session;
-	}
-	public int getId_exercice() {
-		return id_exercice;
-	}
-	public void setId_exercice(int id_exercice) {
-		this.id_exercice = id_exercice;
-	}
 	public int getPosition() {
 		return position;
 	}
@@ -34,5 +22,17 @@ public class SessionExercice {
 	}
 	public void setTimeout(float timeout) {
 		this.timeout = timeout;
+	}
+	public int getIdSession() {
+		return idSession;
+	}
+	public void setIdSession(int idSession) {
+		this.idSession = idSession;
+	}
+	public int getIdExercice() {
+		return idExercice;
+	}
+	public void setIdExercice(int idExercice) {
+		this.idExercice = idExercice;
 	}
 }

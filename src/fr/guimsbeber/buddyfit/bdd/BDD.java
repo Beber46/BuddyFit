@@ -65,13 +65,16 @@ public class BDD  extends SQLiteOpenHelper{
 	public static final int PROGRAM_NUM_ENDDATE = 3;
 	public static final String PROGRAM_COLUMN_DESCRIPTION = "DESCRIPTION";
 	public static final int PROGRAM_NUM_DESCRIPTION = 4;
+	public static final String PROGRAM_COLUMN_ID_USER = "ID_USER";
+	public static final int PROGRAM_NUM_ID_USER = 5;
 	
 	private static final String REQUETE_CREATION_PROGRAM = "CREATE TABLE "+TN_PROGRAM+" " +
 			"("+PROGRAM_COLUMN_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, "
 			+PROGRAM_COLUMN_NAME+" TEXT NOT NULL, "
 			+PROGRAM_COLUMN_BEGINDATE+" INTEGER NOT NULL, "
 			+PROGRAM_COLUMN_ENDDATE+" INTEGER NOT NULL, "
-			+PROGRAM_COLUMN_DESCRIPTION+" TEXT NOT NULL); ";
+			+PROGRAM_COLUMN_DESCRIPTION+" TEXT NOT NULL, "
+			+PROGRAM_COLUMN_ID_USER+" INTEGER NOT NULL); ";
 	
 	/**
 	 * Partie de la creation de la table session

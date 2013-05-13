@@ -11,7 +11,7 @@ public class Program {
 	private int begindate;
 	private int enddate;
 	private String description;
-	private int id_user;
+	private int idUser;
 	
 	public int getId() {
 		return id;
@@ -43,10 +43,10 @@ public class Program {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public int getId_user() {
-		return id_user;
+	public int getIdUser() {
+		return idUser;
 	}
-	public void setId_user(int id_user) {
-		this.id_user = id_user;
+	public void setIdUser(int idUser) {
+		this.idUser = idUser;
 	}
 }

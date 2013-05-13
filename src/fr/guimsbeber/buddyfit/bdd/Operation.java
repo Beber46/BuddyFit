@@ -13,7 +13,7 @@ public class Operation {
 	private int nbrepetition;
 	private float burden;//charge
 	private int dateop;
-	private int id_exercice;
+	private int idExercice;
 	
 	public int getId() {
 		return id;
@@ -45,10 +45,10 @@ public class Operation {
 	public void setDateop(int dateop) {
 		this.dateop = dateop;
 	}
-	public int getId_exercice() {
-		return id_exercice;
+	public int getIdExercice() {
+		return idExercice;
 	}
-	public void setId_exercice(int id_exercice) {
-		this.id_exercice = id_exercice;
+	public void setIdExercice(int idExercice) {
+		this.idExercice = idExercice;
 	}
 }

@@ -10,7 +10,7 @@ public class Exercice {
 	private String name;
 	private String picture;
 	private String description;
-	private int id_subcategory;
+	private int idSubcategory;
 	
 	public int getId() {
 		return id;
@@ -36,11 +36,11 @@ public class Exercice {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public int getId_subcategory() {
-		return id_subcategory;
+	public int getIdSubcategory() {
+		return idSubcategory;
 	}
-	public void setId_subcategory(int id_subcategory) {
-		this.id_subcategory = id_subcategory;
+	public void setIdSubcategory(int idSubcategory) {
+		this.idSubcategory = idSubcategory;
 	}
 	
 }
