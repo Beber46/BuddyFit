@@ -13,5 +13,6 @@
     <string name="sign_in">Sign-In</string>
     <string name="title_activity_sign_up">SignUpActivity</string>
     <string name="title_activity_menu">MenuActivity</string>
+    <string name="signupfacebook">Sign up facebook</string>
 
 </resources>
