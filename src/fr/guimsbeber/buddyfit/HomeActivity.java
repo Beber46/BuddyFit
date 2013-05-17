@@ -3,7 +3,6 @@ package fr.guimsbeber.buddyfit;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
-import android.widget.Gallery;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 
