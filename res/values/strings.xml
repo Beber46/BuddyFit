@@ -14,5 +14,10 @@
     <string name="title_activity_sign_up">SignUpActivity</string>
     <string name="title_activity_menu">MenuActivity</string>
     <string name="signupfacebook">Sign up facebook</string>
+    
+    <!-- Menu Activity -->
+    <string name="activity">Activity</string>
+    <string name="workout">Workout</string>
+    <string name="session">Session</string>
 
 </resources>
