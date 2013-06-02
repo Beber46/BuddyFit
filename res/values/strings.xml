@@ -13,6 +13,7 @@
     <string name="sign_in">Sign-In</string>
     <string name="signupfacebook">Sign up facebook</string>
     <string name="getstarted">Get Started</string>
+    <string name="resetpassword">Reset Password</string>
     
     <!-- Home Activity -->
     <string name="title_activity_sign_up">SignUpActivity</string>
@@ -29,6 +30,8 @@
     ************
     -->
     
+    <string name="email">Email</string>
+    
     <!-- GetStarted Activity -->
     <string name="messwelcome">Welcome to BuddyFit!\nNow you’re a part of the community we would like to know a little more about you to help you</string>
 	<string name="messtitle">Congratulations</string>
@@ -38,5 +41,10 @@
 	<string name="inputweight">Weight</string>
 	<string name="messwantlater">Want to do it later?</string>
 	<string name="messskip">Skip it!</string>
-    
+	
+    <!-- SignUpMail Activity -->
+	<string name="messexplainmail">Enter the e-mail adress you signed-up with and we will send you a link to reset your password.</string>
+    <string name="messwanttryagain">Want to try again?</string>
+    <string name="messback">Back</string>
+	
 </resources>

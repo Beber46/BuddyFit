@@ -3,5 +3,6 @@
     <color name="black_overlay">#66000000</color>
     <color name="white">#ffffff</color>
     <color name="gris">#b2b2b2</color>
+    <color name="textecolorpsd">#b8b8b8</color>
 
 </resources>
