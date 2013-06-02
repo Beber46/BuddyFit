@@ -8,16 +8,35 @@
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
 
-    <!-- Home Activity -->
+    <!-- Button Activity -->
     <string name="sign_up">Sign-Up</string>
     <string name="sign_in">Sign-In</string>
+    <string name="signupfacebook">Sign up facebook</string>
+    <string name="getstarted">Get Started</string>
+    
+    <!-- Home Activity -->
     <string name="title_activity_sign_up">SignUpActivity</string>
     <string name="title_activity_menu">MenuActivity</string>
-    <string name="signupfacebook">Sign up facebook</string>
     
     <!-- Menu Activity -->
     <string name="activity">Activity</string>
     <string name="workout">Workout</string>
     <string name="session">Session</string>
-
+    
+    <!-- 
+    ************
+    MESSAGE 
+    ************
+    -->
+    
+    <!-- GetStarted Activity -->
+    <string name="messwelcome">Welcome to BuddyFit!\nNow you’re a part of the community we would like to know a little more about you to help you</string>
+	<string name="messtitle">Congratulations</string>
+	<string name="inputgenre">Genre</string>
+	<string name="inputbirthdate">Birth Date</string>
+	<string name="inputheight">Height</string>
+	<string name="inputweight">Weight</string>
+	<string name="messwantlater">Want to do it later?</string>
+	<string name="messskip">Skip it!</string>
+    
 </resources>

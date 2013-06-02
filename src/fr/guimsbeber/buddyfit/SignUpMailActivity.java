@@ -1,15 +1,15 @@
 package fr.guimsbeber.buddyfit;
 
-import android.os.Bundle;
 import android.app.Activity;
+import android.os.Bundle;
 import android.view.Menu;
 
-public class SignUpActivity extends Activity {
+public class SignUpMailActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_sign_up);
+		setContentView(R.layout.activity_sign_up_mail);
 	}
 
 	@Override
