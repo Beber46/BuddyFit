@@ -29,6 +29,12 @@
     <string name="detail">Detail</string>
     <string name="exercicetips">Exercice tips and description :</string>
     
+    <!-- Exercice History Activity -->
+    <string name="today">Today</string>
+    <string name="viewtoday">View your today\'s performances</string>
+    <string name="lastsession">Last Session</string>
+    <string name="viewlastsession">View your last session\'s performances</string>
+    
     <!-- 
     ************
     MESSAGE 

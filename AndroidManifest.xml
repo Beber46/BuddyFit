@@ -48,6 +48,10 @@
             android:name="fr.guimsbeber.buddyfit.ExerciceAcitivty"
     		android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" >
         </activity>
+        <activity
+            android:name="fr.guimsbeber.buddyfit.ExerciceHistoryActivity"
+    		android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" >
+        </activity>
     </application>
 
 </manifest>
