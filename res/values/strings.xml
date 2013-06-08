@@ -46,5 +46,18 @@
 	<string name="messexplainmail">Enter the e-mail adress you signed-up with and we will send you a link to reset your password.</string>
     <string name="messwanttryagain">Want to try again?</string>
     <string name="messback">Back</string>
+    
+    <!-- Profil Activity -->
+    <string name="message">Age :</string>
+    <string name="messheight">Height :</string>
+    <string name="messweight">Weight :</string>
+    <string name="messimc">IMC :</string>
+    <string name="messbodymeasurements">Body Measurements</string>
+    
+    <!-- 
+    ************
+    ITEM
+    ************
+     -->
 	
 </resources>
