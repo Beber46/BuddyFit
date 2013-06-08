@@ -25,7 +25,6 @@
         </activity>
         <activity
             android:name="fr.guimsbeber.buddyfit.SignUpActivity"
-            android:label="@string/title_activity_sign_up" 
     		android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen">
         </activity>
         <activity
@@ -43,6 +42,10 @@
         <activity
             android:name="fr.guimsbeber.buddyfit.MenuActivity"
             android:label="@string/title_activity_menu"
+    		android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="fr.guimsbeber.buddyfit.ExerciceAcitivty"
     		android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" >
         </activity>
     </application>

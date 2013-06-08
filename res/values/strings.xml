@@ -23,6 +23,12 @@
     <string name="workout">Workout</string>
     <string name="session">Session</string>
     
+    <!-- Exercice Activity -->
+    <string name="saveandrest">Save and Rest</string>
+    <string name="viewhistory">View History</string>
+    <string name="detail">Detail</string>
+    <string name="exercicetips">Exercice tips and description :</string>
+    
     <!-- 
     ************
     MESSAGE 

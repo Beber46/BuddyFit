@@ -1,0 +1,150 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    android:orientation="vertical"
+    android:weightSum="14"
+    tools:context=".ExerciceAcitivty" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_weight="1"
+    	android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/message"
+            android:gravity="center"
+            android:minHeight="30dp" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/previous"
+            android:gravity="center"
+            android:minHeight="10dp"
+            android:minWidth="10dp" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/txt_buddyfit" />
+
+    </RelativeLayout>
+	    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="#545454"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/txtExerciceName"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Set 1/4 - Exercice Name"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:id="@+id/btnSignIn"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/signin"
+            android:minHeight="20dp"
+            android:minWidth="40dp"
+            android:text="@string/detail"
+            android:textColor="@color/black_overlay"
+            android:textSize="12dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="6"
+        android:weightSum="1"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+        android:padding="10dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/exercicetips"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/black_overlay" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean laoreet urna nec ligula pulvinar sollicitudin.amet, consectetur adipiscing elit.  "
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black_overlay" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lvExercice"
+            android:layout_width="match_parent"
+        	android:background="#d9d9d9"
+            android:layout_height="193dp" >
+
+        </ListView>
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical"
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/signup"
+            android:layout_gravity="center"
+            android:text="@string/saveandrest"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/signin"
+            android:text="@string/viewhistory"
+            android:textColor="@color/grisprofil" />
+
+    </LinearLayout>
+
+</LinearLayout>
