@@ -7,5 +7,7 @@
     <color name="grisprofil2">#e0e0e0</color>
     <color name="textecolorpsd">#b8b8b8</color>
     <color name="red">#b82323</color>
+    <color name="gris_back_liste">#a1a1a1</color>
+    <color name="gris_back_create_routine">#545454</color>
 
 </resources>
