@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class MenuActivity extends Activity {
+public class RoutineListActivity extends Activity {
 	
 	private Button _btnHome;
 	private Button _btnRoutine;
@@ -19,7 +19,7 @@ public class MenuActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_menu);
+		setContentView(R.layout.activity_routine_list);
 		
 		//get buttons
 		_btnHome 		= (Button) findViewById(R.id.btnHome);
@@ -37,29 +37,29 @@ public class MenuActivity extends Activity {
 	}
 	
 	OnClickListener buttonListener = new OnClickListener() {
-		
+			
 		@Override
 		public void onClick(View v) {
 			Intent i = null;
 			//button home
 			if(v == _btnHome){
-				i = new Intent(MenuActivity.this, MenuActivity.class);
+				i = new Intent(RoutineListActivity.this, MenuActivity.class);
 			}
 			//button routines
 			if(v == _btnRoutine){
-				i = new Intent(MenuActivity.this, RoutineListActivity.class);
+				i = new Intent(RoutineListActivity.this, RoutineListActivity.class);
 			}
 			//button activities
 			if(v == _btnActivities){
-				//i = new Intent(MenuActivity.this, MenuActivity.class);
+				//i = new Intent(RoutineListActivity.this, MenuActivity.class);
 			}
 			//button time
 			if(v == _btnTime){
-				//i = new Intent(MenuActivity.this, MenuActivity.class);
+				//i = new Intent(RoutineListActivity.this, MenuActivity.class);
 			}
 			//button profil
 			if(v == _btnProfil){
-				i = new Intent(MenuActivity.this, ProfilActivity.class);
+				i = new Intent(RoutineListActivity.this, ProfilActivity.class);
 			}
 			
 			
@@ -71,4 +71,6 @@ public class MenuActivity extends Activity {
 			
 		}
 	};
+
+
 }

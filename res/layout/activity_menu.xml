@@ -43,35 +43,35 @@
         android:layout_gravity="center" >
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btnHome"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/btn_home_red" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/btnRoutine"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/btn_carnet" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/btnActivities"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/btn_activite" />
 
         <Button
-            android:id="@+id/button61"
+            android:id="@+id/btnTime"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/btn_time" />
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/btnProfil"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -82,7 +82,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:color/darker_gray"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:layout_weight="2" >
 
         <RelativeLayout
             android:layout_width="match_parent"

@@ -13,33 +13,33 @@
     <string name="signupfacebook">Sign up facebook</string>
     <string name="getstarted">Get Started</string>
     <string name="resetpassword">Reset Password</string>
-    
+
     <!-- Home Activity -->
     <string name="title_activity_sign_up">SignUpActivity</string>
     <string name="title_activity_menu">MenuActivity</string>
-    
+
     <!-- Menu Activity -->
     <string name="activity">Activity</string>
     <string name="workout">Workout</string>
     <string name="session">Session</string>
-    
+
     <!-- Exercice Activity -->
     <string name="saveandrest">Save and Rest</string>
     <string name="viewhistory">View History</string>
     <string name="detail">Detail</string>
     <string name="exercicetips">Exercice tips and description :</string>
-    
+
     <!-- Exercice History Activity -->
     <string name="today">Today</string>
     <string name="viewtoday">View your today\'s performances</string>
     <string name="lastsession">Last Session</string>
     <string name="viewlastsession">View your last session\'s performances</string>
-    
-    <!--  Reset pwd -->
+
+    <!-- Reset pwd -->
     <string name="success_maj">SUCCESS</string>
     <string name="pwd_reset_success">Password succefully reset.</string>
     <string name="check_mailbox">Please check your e-mail box.</string>
-    
+
     <!-- Create routine -->
     <string name="create_routine">Create your routine</string>
     <string name="routine_name">Workout Routine Name</string>
@@ -48,42 +48,44 @@
     <string name="description">Description</string>
     <string name="ex_summer_routine">Ex: Summer Routine</string>
     <string name="goal_routine">The goal of this routine is ...\nThe duration is...</string>
-    
-    
-    <!-- 
+
+    <!--
     ************
     MESSAGE 
-    ************
+    ************
     -->
-    
+
     <string name="email">Email</string>
-    
+
     <!-- GetStarted Activity -->
     <string name="messwelcome">Welcome to BuddyFit!\nNow you’re a part of the community we would like to know a little more about you to help you</string>
-	<string name="messtitle">Congratulations</string>
-	<string name="inputgenre">Genre</string>
-	<string name="inputbirthdate">Birth Date</string>
-	<string name="inputheight">Height</string>
-	<string name="inputweight">Weight</string>
-	<string name="messwantlater">Want to do it later?</string>
-	<string name="messskip">Skip it!</string>
-	
+    <string name="messtitle">Congratulations</string>
+    <string name="inputgenre">Genre</string>
+    <string name="inputbirthdate">Birth Date</string>
+    <string name="inputheight">Height</string>
+    <string name="inputweight">Weight</string>
+    <string name="messwantlater">Want to do it later?</string>
+    <string name="messskip">Skip it!</string>
+
     <!-- SignUpMail Activity -->
-	<string name="messexplainmail">Enter the e-mail adress you signed-up with and we will send you a link to reset your password.</string>
+    <string name="messexplainmail">Enter the e-mail adress you signed-up with and we will send you a link to reset your password.</string>
     <string name="messwanttryagain">Want to try again?</string>
     <string name="messback">Back</string>
-    
+
     <!-- Profil Activity -->
     <string name="message">Age :</string>
     <string name="messheight">Height :</string>
     <string name="messweight">Weight :</string>
     <string name="messimc">IMC :</string>
     <string name="messbodymeasurements">Body Measurements</string>
-    
-    <!-- 
+
+    <!--
     ************
     ITEM
-    ************
-     -->
-	
+    ************
+    -->
+
+    <string name="title_activity_routine_list">RoutineListActivity</string>
+    <string name="hello_world">Hello world!</string>
+
 </resources>
