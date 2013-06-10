@@ -3,6 +3,8 @@ package fr.guimsbeber.buddyfit;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import fr.guimsbeber.buddyfit.adapter.AlternateListAdapter;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;

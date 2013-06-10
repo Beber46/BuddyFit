@@ -1,4 +1,4 @@
-package fr.guimsbeber.buddyfit;
+package fr.guimsbeber.buddyfit.adapter;
 
 import java.util.List;
 import java.util.Map;
