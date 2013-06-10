@@ -35,6 +35,21 @@
     <string name="lastsession">Last Session</string>
     <string name="viewlastsession">View your last session\'s performances</string>
     
+    <!--  Reset pwd -->
+    <string name="success_maj">SUCCESS</string>
+    <string name="pwd_reset_success">Password succefully reset.</string>
+    <string name="check_mailbox">Please check your e-mail box.</string>
+    
+    <!-- Create routine -->
+    <string name="create_routine">Create your routine</string>
+    <string name="routine_name">Workout Routine Name</string>
+    <string name="routine_type">Routine Type</string>
+    <string name="days_week">Days / Weeks</string>
+    <string name="description">Description</string>
+    <string name="ex_summer_routine">Ex: Summer Routine</string>
+    <string name="goal_routine">The goal of this routine is ...\nThe duration is...</string>
+    
+    
     <!-- 
     ************
     MESSAGE 
