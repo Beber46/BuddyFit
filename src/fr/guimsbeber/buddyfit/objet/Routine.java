@@ -6,10 +6,9 @@ public class Routine {
 	private String name;
 	private int time;
 	private String description;
-	private String idType;	
+	private int idType;	
 
-	public Routine(int id, String name, int time, String description,
-			String idType) {
+	public Routine(int id, String name, int time, String description, int idType) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -43,10 +42,10 @@ public class Routine {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public String getIdType() {
+	public int getIdType() {
 		return idType;
 	}
-	public void setIdType(String idType) {
+	public void setIdType(int idType) {
 		this.idType = idType;
 	}
 	

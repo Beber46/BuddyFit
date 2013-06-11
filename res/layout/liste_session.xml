@@ -16,27 +16,18 @@
    	 	android:layout_marginLeft="10dp">
 
 	    <TextView
-	        android:id="@+id/tvRoutineNameList"
+	        android:id="@+id/tvSessionNameList"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:textSize="20sp"
 	        android:textColor="@color/gris" />
 	
 	    <TextView
-	        android:id="@+id/tvRoutineDescription"
+	        android:id="@+id/tvSessionDescription"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:textSize="12sp"
 	        android:textColor="@color/gris" />
     </LinearLayout>
-
-    <Button
-        android:id="@+id/btnRoutineView"
-        android:layout_width="20dp"
-        android:layout_height="31dp"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:layout_marginRight="5dp"
-        android:background="@drawable/btn_fle_droite" />
 
 </RelativeLayout>

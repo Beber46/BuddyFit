@@ -10,7 +10,6 @@ import android.widget.Button;
 
 public class MenuActivity extends Activity {
 	
-	private Button _btnHome;
 	private Button _btnRoutine;
 	private Button _btnActivities;
 	private Button _btnExercices;
@@ -22,14 +21,12 @@ public class MenuActivity extends Activity {
 		setContentView(R.layout.activity_menu);
 		
 		//get buttons
-		_btnHome 		= (Button) findViewById(R.id.btnHome);
 		_btnRoutine 	= (Button) findViewById(R.id.btnRoutine);
 		_btnExercices 	= (Button) findViewById(R.id.btnExercices);
-		_btnActivities 		= (Button) findViewById(R.id.btnActivities);
+		_btnActivities 	= (Button) findViewById(R.id.btnActivities);
 		_btnProfil 		= (Button) findViewById(R.id.btnProfil);
 		
 		//listener
-		_btnHome.setOnClickListener(buttonListener);
 		_btnRoutine.setOnClickListener(buttonListener);
 		_btnActivities.setOnClickListener(buttonListener);
 		_btnExercices.setOnClickListener(buttonListener);
@@ -41,10 +38,6 @@ public class MenuActivity extends Activity {
 		@Override
 		public void onClick(View v) {
 			Intent i = null;
-			//button home
-			if(v == _btnHome){
-				i = new Intent(MenuActivity.this, MenuActivity.class);
-			}
 			//button routines
 			if(v == _btnRoutine){
 				i = new Intent(MenuActivity.this, RoutineListActivity.class);

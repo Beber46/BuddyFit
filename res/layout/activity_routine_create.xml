@@ -8,20 +8,29 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="50dp"
         android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp" >
+        android:layout_marginRight="5dp">
 
         <ImageView
-            android:id="@+id/imageView1"
+            android:id="@+id/ivLogo"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_centerInParent="true"
             android:background="@drawable/txt_buddyfit" />
 
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="13dp"
+            android:layout_height="26dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center_vertical" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btnGoPro"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_alignParentRight="true"

@@ -16,8 +16,8 @@
         <activity
             android:name="fr.guimsbeber.buddyfit.MenuActivity"
             android:label="@string/title_activity_home"
-            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" 
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,39 +26,51 @@
         </activity>
         <activity
             android:name="fr.guimsbeber.buddyfit.SignUpActivity"
-            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" 
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" >
         </activity>
         <activity
             android:name="fr.guimsbeber.buddyfit.SignUpMailActivity"
-            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" >
         </activity>
         <activity
             android:name="fr.guimsbeber.buddyfit.GetStartedActivity"
-            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" >
         </activity>
         <activity
             android:name="fr.guimsbeber.buddyfit.ProfilActivity"
-            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" >
         </activity>
         <activity
             android:name="fr.guimsbeber.buddyfit.ExerciceAcitivty"
-            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" >
         </activity>
         <activity
             android:name="fr.guimsbeber.buddyfit.ExerciceHistoryActivity"
-            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" >
         </activity>
         <activity
             android:name="fr.guimsbeber.buddyfit.RoutineListActivity"
             android:label="@string/title_activity_routine_list"
-            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="fr.guimsbeber.buddyfit.RoutineCreateActivity"
+            android:label="@string/title_activity_routine_create"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="fr.guimsbeber.buddyfit.RoutineActivity"
+            android:label="@string/title_activity_routine"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" >
         </activity>
     </application>
 

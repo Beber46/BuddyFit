@@ -47,14 +47,14 @@
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/btn_home_red" />
+            android:background="@drawable/btn_home" />
 
         <Button
             android:id="@+id/btnRoutine"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/btn_routines" />
+            android:background="@drawable/btn_routines_red" />
 
         <Button
             android:id="@+id/btnExercices"
@@ -89,28 +89,28 @@
             android:layout_alignParentBottom="true" >
 
             <Button
-                android:id="@+id/button7"
+                android:id="@+id/btnRoutineAdd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/btn_add" />
 
             <Button
-                android:id="@+id/button8"
+                android:id="@+id/btnRoutineModif"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/btn_modif" />
 
             <Button
-                android:id="@+id/button9"
+                android:id="@+id/btnRoutineRefresh"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/btn_refresh" />
 
             <Button
-                android:id="@+id/button10"
+                android:id="@+id/btnRoutineRm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -118,7 +118,7 @@
         </LinearLayout>
 
         <ListView
-            android:id="@+id/listView1"
+            android:id="@+id/lvRoutines"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"

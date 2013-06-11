@@ -20,6 +20,10 @@ public class RoutineListActivity extends Activity {
 	private Button _btnActivities;
 	private Button _btnExercices;
 	private Button _btnProfil;
+	private Button _btnRoutineAdd;
+	private Button _btnRoutineRm;
+	private Button _btnRoutineModif;
+	private Button _btnRefresh;
 	private ListView _listView;	
 	
 	private ArrayList<Routine> _routines;
@@ -28,47 +32,74 @@ public class RoutineListActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_menu);
+		setContentView(R.layout.activity_routine_list);
 		
-		//get buttons
+		//views
 		_btnHome 		= (Button) findViewById(R.id.btnHome);
 		_btnExercices 	= (Button) findViewById(R.id.btnExercices);
-		_btnActivities 		= (Button) findViewById(R.id.btnActivities);
+		_btnActivities 	= (Button) findViewById(R.id.btnActivities);
 		_btnProfil 		= (Button) findViewById(R.id.btnProfil);
+		_btnRoutineAdd 	= (Button) findViewById(R.id.btnRoutineAdd);
+		_btnRoutineRm	= (Button) findViewById(R.id.btnRoutineRm);
+		_btnRoutineModif= (Button) findViewById(R.id.btnRoutineModif);
+		_btnRefresh		= (Button) findViewById(R.id.btnRoutineRefresh);
+		_listView		= (ListView) findViewById(R.id.lvRoutines);	
 		
 		//listener
 		_btnHome.setOnClickListener(buttonListener);
 		_btnActivities.setOnClickListener(buttonListener);
 		_btnExercices.setOnClickListener(buttonListener);
 		_btnProfil.setOnClickListener(buttonListener);
+		_btnRoutineAdd.setOnClickListener(buttonListener);
+		_btnRoutineRm.setOnClickListener(buttonListener);
+		_btnRoutineModif.setOnClickListener(buttonListener);
+		_btnRefresh.setOnClickListener(buttonListener);
+		
+		_routines = new ArrayList<Routine>();
+		_routines.add(new Routine(0, "Routine 1", 5, "Example routine", 2));
+		_routines.add(new Routine(1, "Routine 2", 5, "Example routine 2", 2));
+		
+		_adapter = new RoutineListAdapter(this, _routines);
+		_listView.setAdapter(_adapter);
+		
 	}
 	
 	OnClickListener buttonListener = new OnClickListener() {
 		
 		@Override
 		public void onClick(View v) {
-			Intent i = null;
+			Intent intentActivity = null;
+			Intent intentRoutine = null;
 			//button home
 			if(v == _btnHome){
-				i = new Intent(RoutineListActivity.this, MenuActivity.class);
+				intentActivity = new Intent(RoutineListActivity.this, MenuActivity.class);
 			}
 			//button activities
 			if(v == _btnActivities){
-				//i = new Intent(MenuActivity.this, MenuActivity.class);
+				//intentActivity = new Intent(MenuActivity.this, MenuActivity.class);
 			}
-			//button time
+			//button exercices
 			if(v == _btnExercices){
-				//i = new Intent(MenuActivity.this, MenuActivity.class);
+				//intentActivity = new Intent(MenuActivity.this, MenuActivity.class);
 			}
 			//button profil
 			if(v == _btnProfil){
-				i = new Intent(RoutineListActivity.this, ProfilActivity.class);
-			}			
+				intentActivity = new Intent(RoutineListActivity.this, ProfilActivity.class);
+			}		
+			//button routine add
+			if(v == _btnRoutineAdd){
+				intentRoutine = new Intent(RoutineListActivity.this, RoutineCreateActivity.class);
+			}
 			
 			//intent not null, start activity
-			if(i != null){				
-				startActivity(i);
+			if(intentActivity != null){				
+				startActivity(intentActivity);
 				finish();
+			}
+			
+			//intent not null, start activity
+			if(intentRoutine != null){				
+				startActivity(intentRoutine);
 			}
 			
 		}
