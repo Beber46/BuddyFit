@@ -1,15 +1,15 @@
-package fr.guimsbeber.buddyfit.bdd;
+package fr.guimsbeber.buddyfit.objet;
 
 /**
- * Cette class permet d'accéder aux sessions des différents programmes
+ * Cette class permet de créer des sous-catégories
  * @author Bertrand
  *
  */
-public class Session {
+public class SubCategory {
 	private int id;
 	private String name;
 	private String description;
-	private int idProgram;
+	private int idCategory;
 	
 	public int getId() {
 		return id;
@@ -29,10 +29,10 @@ public class Session {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public int getIdProgram() {
-		return idProgram;
+	public int getIdCategory() {
+		return idCategory;
 	}
-	public void setIdProgram(int idProgram) {
-		this.idProgram = idProgram;
+	public void setIdCategory(int idCategory) {
+		this.idCategory = idCategory;
 	}
 }

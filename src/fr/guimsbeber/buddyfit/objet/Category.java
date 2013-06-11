@@ -1,15 +1,14 @@
-package fr.guimsbeber.buddyfit.bdd;
+package fr.guimsbeber.buddyfit.objet;
 
 /**
- * Cette class permet de créer des sous-catégories
+ * Cette class permet d'accéder aux différentes catégories existant dans la BDD
  * @author Bertrand
  *
  */
-public class SubCategory {
+public class Category {
 	private int id;
 	private String name;
 	private String description;
-	private int idCategory;
 	
 	public int getId() {
 		return id;
@@ -28,11 +27,5 @@ public class SubCategory {
 	}
 	public void setDescription(String description) {
 		this.description = description;
-	}
-	public int getIdCategory() {
-		return idCategory;
-	}
-	public void setIdCategory(int idCategory) {
-		this.idCategory = idCategory;
 	}
 }

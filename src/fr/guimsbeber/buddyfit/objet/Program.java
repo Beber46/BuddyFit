@@ -1,4 +1,4 @@
-package fr.guimsbeber.buddyfit.bdd;
+package fr.guimsbeber.buddyfit.objet;
 
 /**
  * Cette class va permettre d'accéder à tous les programmes présents dans la base

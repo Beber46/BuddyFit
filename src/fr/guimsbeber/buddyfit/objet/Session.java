@@ -1,16 +1,15 @@
-package fr.guimsbeber.buddyfit.bdd;
+package fr.guimsbeber.buddyfit.objet;
 
 /**
- * Cette class permet d'accéder aux exercices
+ * Cette class permet d'accéder aux sessions des différents programmes
  * @author Bertrand
  *
  */
-public class Exercice {
+public class Session {
 	private int id;
 	private String name;
-	private String picture;
 	private String description;
-	private int idSubcategory;
+	private int idProgram;
 	
 	public int getId() {
 		return id;
@@ -24,23 +23,16 @@ public class Exercice {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getPicture() {
-		return picture;
-	}
-	public void setPicture(String picture) {
-		this.picture = picture;
-	}
 	public String getDescription() {
 		return description;
 	}
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public int getIdSubcategory() {
-		return idSubcategory;
+	public int getIdProgram() {
+		return idProgram;
 	}
-	public void setIdSubcategory(int idSubcategory) {
-		this.idSubcategory = idSubcategory;
+	public void setIdProgram(int idProgram) {
+		this.idProgram = idProgram;
 	}
-	
 }

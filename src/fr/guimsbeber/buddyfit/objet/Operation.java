@@ -1,4 +1,4 @@
-package fr.guimsbeber.buddyfit.bdd;
+package fr.guimsbeber.buddyfit.objet;
 
 /**
  * Cette class permet d'accéder aux éléments propre à un exercice

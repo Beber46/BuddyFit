@@ -6,17 +6,39 @@ import java.util.HashMap;
 import fr.guimsbeber.buddyfit.adapter.AlternateListAdapter;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ListView;
 
 public class ProfilActivity extends Activity {
+	
 	private ListView mListViewTest;
+	private Button _btnHome;
+	private Button _btnActivities;
+	private Button _btnExercices;
+	private Button _btnRoutine;
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_profil);
+		
+		//get buttons
+		_btnHome 		= (Button) findViewById(R.id.btnHome);
+		_btnRoutine 	= (Button) findViewById(R.id.btnRoutine);
+		_btnExercices 	= (Button) findViewById(R.id.btnExercices);
+		_btnActivities 		= (Button) findViewById(R.id.btnActivities);
+		
+		//listener
+		_btnHome.setOnClickListener(buttonListener);
+		_btnRoutine.setOnClickListener(buttonListener);
+		_btnActivities.setOnClickListener(buttonListener);
+		_btnExercices.setOnClickListener(buttonListener);
 		
 		//Récup list view
 		mListViewTest = (ListView)findViewById(R.id.lvInfoUser);
@@ -72,37 +94,36 @@ public class ProfilActivity extends Activity {
         
         mListViewTest.setAdapter(mSimpleAdapter);
 	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.sign_up, menu);
-		return true;
-	}
-
-	@Override
-    protected void onStart() {
-        super.onStart();
-        // The activity is about to become visible.
-    }
-    @Override
-    protected void onResume() {
-        super.onResume();
-        // The activity has become visible (it is now "resumed").
-    }
-    @Override
-    protected void onPause() {
-        super.onPause();
-        // Another activity is taking focus (this activity is about to be "paused").
-    }
-    @Override
-    protected void onStop() {
-        super.onStop();
-        // The activity is no longer visible (it is now "stopped")
-    }
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        // The activity is about to be destroyed.
-    }
+    
+	OnClickListener buttonListener = new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent i = null;
+				//button home
+				if(v == _btnHome){
+					i = new Intent(ProfilActivity.this, MenuActivity.class);
+				}
+				//button activities
+				if(v == _btnActivities){
+					//i = new Intent(ProfilActivity.this, MenuActivity.class);
+				}
+				//button routines
+				if(v == _btnRoutine){
+					i = new Intent(ProfilActivity.this, RoutineListActivity.class);
+				}
+				//button exercices
+				if(v == _btnExercices){
+					//i = new Intent(ProfilActivity.this, MenuActivity.class);
+				}
+				
+				//intent not null, start activity
+				if(i != null){				
+					startActivity(i);
+					finish();
+				}
+				
+			}
+		};
+    
 }

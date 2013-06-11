@@ -1,4 +1,4 @@
-package fr.guimsbeber.buddyfit.bdd;
+package fr.guimsbeber.buddyfit.objet;
 
 /**
  * Cette class a pour but d'accéder à tous les éléments d'un utilisateur

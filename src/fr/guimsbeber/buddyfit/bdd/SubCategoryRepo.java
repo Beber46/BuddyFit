@@ -3,6 +3,8 @@ package fr.guimsbeber.buddyfit.bdd;
 import java.util.ArrayList;
 import java.util.List;
 
+import fr.guimsbeber.buddyfit.objet.SubCategory;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
