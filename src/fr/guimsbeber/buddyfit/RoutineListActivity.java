@@ -1,5 +1,10 @@
 package fr.guimsbeber.buddyfit;
 
+import java.util.ArrayList;
+
+import fr.guimsbeber.buddyfit.adapter.RoutineListAdapter;
+import fr.guimsbeber.buddyfit.objet.Routine;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -7,6 +12,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ListView;
 
 public class RoutineListActivity extends Activity {
 	
@@ -14,6 +20,10 @@ public class RoutineListActivity extends Activity {
 	private Button _btnActivities;
 	private Button _btnExercices;
 	private Button _btnProfil;
+	private ListView _listView;	
+	
+	private ArrayList<Routine> _routines;
+	private RoutineListAdapter _adapter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

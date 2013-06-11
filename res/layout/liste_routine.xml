@@ -15,22 +15,16 @@
    	 	android:layout_marginLeft="10dp">
 
 	    <TextView
-	        android:id="@+id/textView1"
+	        android:id="@+id/tvRoutineNameList"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignParentLeft="true"
-	        android:layout_alignParentTop="true"
-	        android:text="Routine Name"
 	        android:textSize="20sp"
 	        android:textColor="@color/gris" />
 	
 	    <TextView
-	        android:id="@+id/textView2"
+	        android:id="@+id/tvRoutineDescription"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignParentLeft="true"
-	        android:layout_below="@+id/textView1"
-	        android:text="Routine Description"
 	        android:textSize="12sp"
 	        android:textColor="@color/gris" />
     </LinearLayout>
