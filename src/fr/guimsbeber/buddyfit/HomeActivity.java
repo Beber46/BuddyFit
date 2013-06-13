@@ -13,20 +13,34 @@ public class HomeActivity extends Activity {
 	
 	private HorizontalScrollView _horizontalScrollView;
 	private ImageView _ivBarrePoints;
+	
+	private Button _signUp;
+	private Button _signIn;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home);
 		
-		Button signUp = (Button)findViewById(R.id.btnSignUp);
+		_signUp = (Button)findViewById(R.id.btnSignUp);
+		_signIn = (Button)findViewById(R.id.btnSignIn);
 		
-		signUp.setOnClickListener(new View.OnClickListener() {
+		_signUp.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				Intent mIntent = new Intent(v.getContext(), SignUpActivity.class);
+				startActivity(mIntent);
+			}
+		});
+		
+		_signIn.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent mIntent = new Intent(v.getContext(), MenuActivity.class);
 				startActivity(mIntent);
 			}
 		});

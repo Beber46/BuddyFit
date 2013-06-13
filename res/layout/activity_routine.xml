@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_centerInParent="true"
-            android:background="@drawable/txt_buddyfit" />
+            android:background="@drawable/logotitle" />
 
         <Button
             android:id="@+id/btnBack"

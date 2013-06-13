@@ -2,14 +2,31 @@ package fr.guimsbeber.buddyfit;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
 
 public class SignUpActivity extends Activity {
+	private Button _Btn_signinfirst;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_sign_up);
+		
+		_Btn_signinfirst = (Button)findViewById(R.id.btn_signinfirst);
+		
+		_Btn_signinfirst.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent mIntent = new Intent(v.getContext(), GetStartedActivity.class);
+				startActivity(mIntent);
+				finish();
+			}
+		});
 	}
 
 	@Override
