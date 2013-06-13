@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/back"
-    tools:context=".HomeActivity" >
+    tools:context=".HomeActivity2" >
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView1"
