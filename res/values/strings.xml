@@ -52,7 +52,7 @@
     <!--
     ************
     MESSAGE 
-    ************
+    ************
     -->
 
     <string name="email">Email</string>
@@ -82,12 +82,13 @@
     <!--
     ************
     ITEM
-    ************
+    ************
     -->
 
     <string name="title_activity_routine_list">RoutineListActivity</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_routine_create">RoutineCreateActivity</string>
     <string name="title_activity_routine">RoutineActivity</string>
+    <string name="title_activity_activities">ActivitiesActivity</string>
 
 </resources>

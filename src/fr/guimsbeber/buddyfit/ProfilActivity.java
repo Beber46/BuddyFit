@@ -114,7 +114,7 @@ public class ProfilActivity extends Activity {
 				}
 				//button exercices
 				if(v == _btnExercices){
-					//i = new Intent(ProfilActivity.this, MenuActivity.class);
+					i = new Intent(ProfilActivity.this, ExercicesActivity.class);
 				}
 				
 				//intent not null, start activity

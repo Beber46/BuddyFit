@@ -76,11 +76,11 @@ public class RoutineListActivity extends Activity {
 			}
 			//button activities
 			if(v == _btnActivities){
-				//intentActivity = new Intent(MenuActivity.this, MenuActivity.class);
+				//intentActivity = new Intent(RoutineListActivity.this, MenuActivity.class);
 			}
 			//button exercices
 			if(v == _btnExercices){
-				//intentActivity = new Intent(MenuActivity.this, MenuActivity.class);
+				intentActivity = new Intent(RoutineListActivity.this, ExercicesActivity.class);
 			}
 			//button profil
 			if(v == _btnProfil){

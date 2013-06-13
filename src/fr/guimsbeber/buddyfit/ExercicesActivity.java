@@ -8,31 +8,32 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class MenuActivity extends Activity {
+public class ExercicesActivity extends Activity {
 	
 	private Button _btnRoutine;
 	private Button _btnActivities;
-	private Button _btnExercices;
+	private Button _btnHome;
 	private Button _btnProfil;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_menu);
+		setContentView(R.layout.activity_exercices);
 		
 		//get buttons
-		_btnRoutine 	= (Button) findViewById(R.id.btnRoutine);
-		_btnExercices 	= (Button) findViewById(R.id.btnExercices);
-		_btnActivities 	= (Button) findViewById(R.id.btnActivities);
-		_btnProfil 		= (Button) findViewById(R.id.btnProfil);
-		
-		//listener
-		_btnRoutine.setOnClickListener(buttonListener);
-		_btnActivities.setOnClickListener(buttonListener);
-		_btnExercices.setOnClickListener(buttonListener);
-		_btnProfil.setOnClickListener(buttonListener);
+				_btnRoutine 	= (Button) findViewById(R.id.btnRoutine);
+				_btnHome 		= (Button) findViewById(R.id.btnHome);
+				_btnActivities 	= (Button) findViewById(R.id.btnActivities);
+				_btnProfil 		= (Button) findViewById(R.id.btnProfil);
+				
+				//listener
+				_btnRoutine.setOnClickListener(buttonListener);
+				_btnActivities.setOnClickListener(buttonListener);
+				_btnHome.setOnClickListener(buttonListener);
+				_btnProfil.setOnClickListener(buttonListener);
 	}
-	
+
+
 	OnClickListener buttonListener = new OnClickListener() {
 		
 		@Override
@@ -40,19 +41,19 @@ public class MenuActivity extends Activity {
 			Intent i = null;
 			//button routines
 			if(v == _btnRoutine){
-				i = new Intent(MenuActivity.this, RoutineListActivity.class);
+				i = new Intent(ExercicesActivity.this, RoutineListActivity.class);
 			}
 			//button activities
 			if(v == _btnActivities){
 				//i = new Intent(MenuActivity.this, MenuActivity.class);
 			}
 			//button execices
-			if(v == _btnExercices){
-				i = new Intent(MenuActivity.this, ExercicesActivity.class);
+			if(v == _btnHome){
+				i = new Intent(ExercicesActivity.this, MenuActivity.class);
 			}
 			//button profil
 			if(v == _btnProfil){
-				i = new Intent(MenuActivity.this, ProfilActivity.class);
+				i = new Intent(ExercicesActivity.this, ProfilActivity.class);
 			}
 			
 			
@@ -64,4 +65,5 @@ public class MenuActivity extends Activity {
 			
 		}
 	};
+
 }

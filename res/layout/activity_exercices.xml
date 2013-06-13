@@ -1,0 +1,213 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    android:orientation="vertical"
+    tools:context=".MenuActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" >
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/txt_buddyfit" />
+
+        <Button
+            android:id="@+id/btnMenu"
+            android:layout_width="38dp"
+            android:layout_height="28dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_menu"
+            android:gravity="center_vertical" />
+
+        <Button
+            android:id="@+id/btnGoPro"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_gopro" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" >
+
+        <Button
+            android:id="@+id/btnHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_home" />
+
+        <Button
+            android:id="@+id/btnRoutine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_routines" />
+
+        <Button
+            android:id="@+id/btnExercices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_exercices_red" />
+
+        <Button
+            android:id="@+id/btnActivities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_activities" />
+
+        <Button
+            android:id="@+id/btnProfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_profil" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/fond_corps_couleur" >
+
+       <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="378dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/fond_corps" >
+
+            <!-- ############### Gauche ################### -->
+
+            <Button
+                android:id="@+id/btnTriceps"
+                android:layout_width="75dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_triceps" />
+
+            <Button
+                android:id="@+id/btnBiceps"
+                android:layout_width="75dp"
+                android:layout_height="30dp"
+                android:layout_alignLeft="@+id/btnTriceps"
+                android:layout_below="@+id/btnTriceps"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_biceps" />
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="75dp"
+                android:layout_height="30dp"
+                android:layout_alignLeft="@+id/btnBiceps"
+                android:layout_below="@+id/btnBiceps"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_back" />
+
+            <Button
+                android:id="@+id/btnGlutes"
+                android:layout_width="75dp"
+                android:layout_height="30dp"
+                android:layout_alignLeft="@+id/btnBack"
+                android:layout_below="@+id/btnBack"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_glutes" />
+
+            <Button
+                android:id="@+id/btnLowerLegs"
+                android:layout_width="75dp"
+                android:layout_height="30dp"
+                android:layout_alignRight="@+id/btnGlutes"
+                android:layout_below="@+id/btnGlutes"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/btn_lowerlegs" />
+                          
+            <Button
+                android:id="@+id/btnCardio"
+                android:layout_width="75dp"
+                android:layout_height="30dp"
+                android:layout_alignLeft="@+id/btnLowerLegs"
+                android:layout_below="@+id/btnLowerLegs"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/btn_cardio" />
+
+
+
+            <!-- ############### Droite ################### -->
+
+            <Button
+                android:id="@+id/btnShoulder"
+                android:layout_width="75dp"
+                android:layout_height="30dp"
+                android:layout_alignBaseline="@+id/btnTriceps"
+                android:layout_alignBottom="@+id/btnTriceps"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="18dp"
+                android:background="@drawable/btn_soulder" />
+
+            <Button
+                android:id="@+id/btnChest"
+                android:layout_width="75dp"
+                android:layout_height="30dp"
+                android:layout_above="@+id/btnBack"
+                android:layout_alignLeft="@+id/btnShoulder"
+                android:background="@drawable/btn_chest" />
+
+            <Button
+                android:id="@+id/btnForearm"
+                android:layout_width="75dp"
+                android:layout_height="30dp"
+                android:layout_above="@+id/btnGlutes"
+                android:layout_alignLeft="@+id/btnChest"
+                android:background="@drawable/btn_forearm" />
+
+
+
+            <Button
+                android:id="@+id/btnAbs"
+                android:layout_width="75dp"
+                android:layout_height="30dp"
+                android:layout_alignBaseline="@+id/btnGlutes"
+                android:layout_alignBottom="@+id/btnGlutes"
+                android:layout_alignLeft="@+id/btnForearm"
+                android:background="@drawable/btn_abs" />
+
+            <Button
+                android:id="@+id/btnUpperLegs"
+                android:layout_width="75dp"
+                android:layout_height="30dp"
+                android:layout_above="@+id/btnCardio"
+                android:layout_alignLeft="@+id/btnShowAll"
+                android:background="@drawable/btn_upperlegs" />
+            
+                        
+            <Button
+                android:id="@+id/btnShowAll"
+                android:layout_width="75dp"
+                android:layout_height="30dp"
+                android:layout_alignBaseline="@+id/btnCardio"
+                android:layout_alignBottom="@+id/btnCardio"
+                android:layout_alignLeft="@+id/btnForearm"
+                android:background="@drawable/btn_showall" />
+            
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

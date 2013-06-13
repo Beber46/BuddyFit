@@ -77,6 +77,12 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" >
         </activity>
+        <activity
+            android:name="fr.guimsbeber.buddyfit.ExercicesActivity"
+            android:label="@string/title_activity_activities"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" >
+        </activity>
     </application>
 
 </manifest>
