@@ -35,12 +35,12 @@
                 android:id="@+id/btnSignUp"
                 android:layout_width="250dp"
                 android:layout_height="45dp"
-                android:background="@drawable/signup"
+                android:background="@drawable/btnred"
                 android:text="@string/sign_up" />
 
             <Button
                 android:id="@+id/btnSignIn"
-                android:background="@drawable/signin"
+                android:background="@drawable/btngrey"
                 android:layout_width="250dp"
                 android:layout_height="45dp"
                 android:gravity="center"

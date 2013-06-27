@@ -27,7 +27,7 @@
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="5dp"
-            android:background="@drawable/btn_back"
+            android:background="@drawable/previous"
             android:gravity="center_vertical" />
 
         <Button

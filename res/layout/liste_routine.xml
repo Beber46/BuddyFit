@@ -37,6 +37,6 @@
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:layout_marginRight="5dp"
-        android:background="@drawable/btn_fle_droite" />
+        android:background="@drawable/btnfledroite" />
 
 </RelativeLayout>

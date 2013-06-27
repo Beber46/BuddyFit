@@ -26,16 +26,17 @@
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="5dp"
-            android:background="@drawable/btn_back"
+            android:background="@drawable/previous"
             android:gravity="center_vertical" />
 
         <Button
             android:id="@+id/btnGoPro"
-            android:layout_width="wrap_content"
+            android:layout_width="75dp"
             android:layout_height="30dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:background="@drawable/btn_gopro" />
+            android:text="@string/gopro"
+            android:background="@drawable/btnred" />
     </RelativeLayout>
 
     <TextView
@@ -143,6 +144,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/btn_saveroutine"/>
+        android:text="@string/saveroutine"
+        android:background="@drawable/btnred"/>
 
 </LinearLayout>

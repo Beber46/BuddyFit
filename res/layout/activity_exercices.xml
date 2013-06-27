@@ -30,16 +30,17 @@
 
         <Button
             android:id="@+id/btnGoPro"
-            android:layout_width="wrap_content"
+            android:layout_width="75dp"
             android:layout_height="30dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:background="@drawable/btn_gopro" />
+            android:text="@string/gopro"
+            android:background="@drawable/btnred" />
     </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_gravity="center" >
 
         <Button
@@ -100,7 +101,9 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="14dp"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/btn_triceps" />
+                android:text="@string/triceps"
+                android:textSize="15sp"
+                android:background="@drawable/btnred" />
 
             <Button
                 android:id="@+id/btnBiceps"
@@ -109,7 +112,9 @@
                 android:layout_alignLeft="@+id/btnTriceps"
                 android:layout_below="@+id/btnTriceps"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/btn_biceps" />
+                android:text="@string/biceps"
+                android:textSize="15sp"
+                android:background="@drawable/btnred" />
 
             <Button
                 android:id="@+id/btnBack"
@@ -118,7 +123,9 @@
                 android:layout_alignLeft="@+id/btnBiceps"
                 android:layout_below="@+id/btnBiceps"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/btn_back" />
+                android:text="@string/back"
+                android:textSize="15sp"
+                android:background="@drawable/btnred" />
 
             <Button
                 android:id="@+id/btnGlutes"
@@ -127,7 +134,9 @@
                 android:layout_alignLeft="@+id/btnBack"
                 android:layout_below="@+id/btnBack"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/btn_glutes" />
+                android:text="@string/glutes"
+                android:textSize="15sp"
+                android:background="@drawable/btnred" />
 
             <Button
                 android:id="@+id/btnLowerLegs"
@@ -136,7 +145,9 @@
                 android:layout_alignRight="@+id/btnGlutes"
                 android:layout_below="@+id/btnGlutes"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/btn_lowerlegs" />
+                android:background="@drawable/btnred"
+                android:text="@string/lowerleg"
+                android:textSize="15sp" />
                           
             <Button
                 android:id="@+id/btnCardio"
@@ -145,7 +156,9 @@
                 android:layout_alignLeft="@+id/btnLowerLegs"
                 android:layout_below="@+id/btnLowerLegs"
                 android:layout_marginTop="40dp"
-                android:background="@drawable/btn_cardio" />
+                android:text="@string/cardio"
+                android:textSize="15sp"
+                android:background="@drawable/btnred" />
 
 
 
@@ -159,7 +172,9 @@
                 android:layout_alignBottom="@+id/btnTriceps"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="18dp"
-                android:background="@drawable/btn_soulder" />
+                android:text="@string/shoulder"
+                android:textSize="15sp"
+                android:background="@drawable/btnred" />
 
             <Button
                 android:id="@+id/btnChest"
@@ -167,7 +182,9 @@
                 android:layout_height="30dp"
                 android:layout_above="@+id/btnBack"
                 android:layout_alignLeft="@+id/btnShoulder"
-                android:background="@drawable/btn_chest" />
+                android:text="@string/chest"
+                android:textSize="15sp"
+                android:background="@drawable/btnred" />
 
             <Button
                 android:id="@+id/btnForearm"
@@ -175,7 +192,9 @@
                 android:layout_height="30dp"
                 android:layout_above="@+id/btnGlutes"
                 android:layout_alignLeft="@+id/btnChest"
-                android:background="@drawable/btn_forearm" />
+                android:text="@string/forearm"
+                android:textSize="15sp"
+                android:background="@drawable/btnred" />
 
 
 
@@ -186,7 +205,9 @@
                 android:layout_alignBaseline="@+id/btnGlutes"
                 android:layout_alignBottom="@+id/btnGlutes"
                 android:layout_alignLeft="@+id/btnForearm"
-                android:background="@drawable/btn_abs" />
+                android:text="@string/abs"
+                android:textSize="15sp"
+                android:background="@drawable/btnred" />
 
             <Button
                 android:id="@+id/btnUpperLegs"
@@ -194,7 +215,9 @@
                 android:layout_height="30dp"
                 android:layout_above="@+id/btnCardio"
                 android:layout_alignLeft="@+id/btnShowAll"
-                android:background="@drawable/btn_upperlegs" />
+                android:text="@string/upperleg"
+                android:textSize="15sp"
+                android:background="@drawable/btnred" />
             
                         
             <Button
@@ -204,7 +227,9 @@
                 android:layout_alignBaseline="@+id/btnCardio"
                 android:layout_alignBottom="@+id/btnCardio"
                 android:layout_alignLeft="@+id/btnForearm"
-                android:background="@drawable/btn_showall" />
+                android:text="@string/showall"
+                android:textSize="15sp"
+                android:background="@drawable/btnred" />
             
 
         </RelativeLayout>

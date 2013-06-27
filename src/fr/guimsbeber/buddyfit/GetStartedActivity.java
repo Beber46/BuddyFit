@@ -40,6 +40,7 @@ public class GetStartedActivity extends Activity {
 	@Override
     protected void onStart() {
         super.onStart();
+		overridePendingTransition(R.anim.push_up_in, R.anim.hold);
         // The activity is about to become visible.
     }
     @Override

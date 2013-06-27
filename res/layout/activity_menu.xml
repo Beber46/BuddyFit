@@ -30,16 +30,17 @@
 
         <Button
             android:id="@+id/btnGoPro"
-            android:layout_width="wrap_content"
+            android:layout_width="75dp"
             android:layout_height="30dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:background="@drawable/btn_gopro" />
+            android:text="@string/gopro"
+            android:background="@drawable/btnred" />
     </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_gravity="center" >
 
         <Button
@@ -124,7 +125,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="5dp"
-                android:background="@drawable/btn_fle_droite" />
+                android:background="@drawable/btnfledroite" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -166,7 +167,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="5dp"
-                android:background="@drawable/btn_fle_droite" />
+                android:background="@drawable/btnfledroite" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -209,7 +210,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="5dp"
-                android:background="@drawable/btn_fle_droite" />
+                android:background="@drawable/btnfledroite" />
         </RelativeLayout>
     </LinearLayout>
 
@@ -224,7 +225,8 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:background="@drawable/btn_start" />
+            android:text="@string/start"
+            android:background="@drawable/btnred" />
     </RelativeLayout>
 
 </LinearLayout>

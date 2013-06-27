@@ -22,12 +22,12 @@
 
         <Button
             android:id="@+id/btnBack"
-            android:layout_width="13dp"
+            android:layout_width="wrap_content"
             android:layout_height="26dp"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="5dp"
-            android:background="@drawable/btn_back"
+            android:background="@drawable/previous"
             android:gravity="center_vertical" />
 
         <Button
@@ -62,7 +62,7 @@
             android:layout_height="25dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:background="@drawable/signin"
+            android:background="@drawable/btngrey"
             android:minHeight="20dp"
             android:minWidth="40dp"
             android:text="@string/detail"
@@ -125,7 +125,7 @@
             android:id="@+id/button8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/signup"
+            android:background="@drawable/btnred"
             android:layout_gravity="center"
             android:text="@string/saveandrest"
             android:textColor="@color/white" />
@@ -136,7 +136,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:background="@drawable/signin"
+            android:background="@drawable/btngrey"
             android:text="@string/viewhistory"
             android:textColor="@color/grisprofil" />
 

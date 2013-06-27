@@ -32,6 +32,7 @@ public class HomeActivity extends Activity {
 				// TODO Auto-generated method stub
 				Intent mIntent = new Intent(v.getContext(), SignUpActivity.class);
 				startActivity(mIntent);
+				overridePendingTransition(R.anim.pull_in_from_left, R.anim.hold);
 			}
 		});
 		

@@ -68,7 +68,7 @@
             android:id="@+id/button2"
             android:layout_width="250dp"
             android:layout_height="50dp"
-            android:background="@drawable/signup"
+            android:background="@drawable/btnred"
             android:textColor="@color/white"
             android:text="@string/resetpassword"
             android:layout_gravity="center" />
