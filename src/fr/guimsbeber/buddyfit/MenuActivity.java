@@ -25,6 +25,11 @@ public class MenuActivity extends Activity {
 		_btnExercices 	= (Button) findViewById(R.id.btnExercices);
 		_btnActivities 	= (Button) findViewById(R.id.btnActivities);
 		_btnProfil 		= (Button) findViewById(R.id.btnProfil);
+
+		ButtonEffect.assignGrey(_btnRoutine);
+		ButtonEffect.assignGrey(_btnExercices);
+		ButtonEffect.assignGrey(_btnActivities);
+		ButtonEffect.assignGrey(_btnProfil);
 		
 		//listener
 		_btnRoutine.setOnClickListener(buttonListener);
@@ -43,15 +48,15 @@ public class MenuActivity extends Activity {
 				i = new Intent(MenuActivity.this, RoutineListActivity.class);
 			}
 			//button activities
-			if(v == _btnActivities){
+			else if(v == _btnActivities){
 				//i = new Intent(MenuActivity.this, MenuActivity.class);
 			}
 			//button execices
-			if(v == _btnExercices){
+			else if(v == _btnExercices){
 				i = new Intent(MenuActivity.this, ExercicesActivity.class);
 			}
 			//button profil
-			if(v == _btnProfil){
+			else if(v == _btnProfil){
 				i = new Intent(MenuActivity.this, ProfilActivity.class);
 			}
 			
@@ -59,7 +64,6 @@ public class MenuActivity extends Activity {
 			//intent not null, start activity
 			if(i != null){				
 				startActivity(i);
-				finish();
 			}
 			
 		}
@@ -69,7 +73,7 @@ public class MenuActivity extends Activity {
 	@Override
     protected void onStart() {
         super.onStart();
-		overridePendingTransition(R.anim.zoom_enter, R.anim.hold);
+		overridePendingTransition(R.anim.fade, R.anim.hold);
         // The activity is about to become visible.
     }
     @Override

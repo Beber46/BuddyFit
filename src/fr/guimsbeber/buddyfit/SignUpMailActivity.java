@@ -22,6 +22,7 @@ public class SignUpMailActivity extends Activity {
 	@Override
     protected void onStart() {
         super.onStart();
+		overridePendingTransition(R.anim.fade, R.anim.hold);
         // The activity is about to become visible.
     }
     @Override

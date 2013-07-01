@@ -1,50 +1,30 @@
 package fr.guimsbeber.buddyfit;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
-import android.view.View;
-import android.widget.Button;
-import android.widget.HorizontalScrollView;
-import android.widget.ImageView;
 
 public class HomeActivity extends Activity {
-	
-	private HorizontalScrollView _horizontalScrollView;
-	private ImageView _ivBarrePoints;
-	
-	private Button _signUp;
-	private Button _signIn;
+	Handler mhandler = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home);
 		
-		_signUp = (Button)findViewById(R.id.btnSignUp);
-		_signIn = (Button)findViewById(R.id.btnSignIn);
 		
-		_signUp.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				Intent mIntent = new Intent(v.getContext(), SignUpActivity.class);
-				startActivity(mIntent);
-				overridePendingTransition(R.anim.pull_in_from_left, R.anim.hold);
-			}
-		});
-		
-		_signIn.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				Intent mIntent = new Intent(v.getContext(), MenuActivity.class);
-				startActivity(mIntent);
-			}
-		});
+		mhandler = new Handler();
+		mhandler.postDelayed(new Runnable() {            
+	        @Override
+	        public void run() {
+	            Intent intent = new Intent(HomeActivity.this, MenuActivity.class);
+	            startActivity(intent);  
+	            finish();
+	        }
+	    }, 3000);
+	    
 	}
 	
 	@Override
@@ -57,6 +37,7 @@ public class HomeActivity extends Activity {
 	@Override
     protected void onStart() {
         super.onStart();
+		overridePendingTransition(R.anim.fade, R.anim.hold);
         // The activity is about to become visible.
     }
     @Override

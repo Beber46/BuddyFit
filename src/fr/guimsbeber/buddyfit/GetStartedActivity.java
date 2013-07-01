@@ -36,11 +36,11 @@ public class GetStartedActivity extends Activity {
 		getMenuInflater().inflate(R.menu.home, menu);
 		return true;
 	}
-	
+
 	@Override
     protected void onStart() {
         super.onStart();
-		overridePendingTransition(R.anim.push_up_in, R.anim.hold);
+		overridePendingTransition(R.anim.fade, R.anim.hold);
         // The activity is about to become visible.
     }
     @Override

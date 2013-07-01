@@ -30,15 +30,9 @@ public class SignUpActivity extends Activity {
 	}
 
 	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.sign_up, menu);
-		return true;
-	}
-
-	@Override
     protected void onStart() {
         super.onStart();
+		overridePendingTransition(R.anim.fade, R.anim.hold);
         // The activity is about to become visible.
     }
     @Override

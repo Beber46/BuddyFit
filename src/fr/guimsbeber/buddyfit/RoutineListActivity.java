@@ -44,6 +44,11 @@ public class RoutineListActivity extends Activity {
 		_btnRoutineModif= (Button) findViewById(R.id.btnRoutineModif);
 		_btnRefresh		= (Button) findViewById(R.id.btnRoutineRefresh);
 		_listView		= (ListView) findViewById(R.id.lvRoutines);	
+
+		ButtonEffect.assignGrey(_btnHome);
+		ButtonEffect.assignGrey(_btnProfil);
+		ButtonEffect.assignGrey(_btnExercices);
+		ButtonEffect.assignGrey(_btnActivities);
 		
 		//listener
 		_btnHome.setOnClickListener(buttonListener);
@@ -75,19 +80,19 @@ public class RoutineListActivity extends Activity {
 				intentActivity = new Intent(RoutineListActivity.this, MenuActivity.class);
 			}
 			//button activities
-			if(v == _btnActivities){
+			else if(v == _btnActivities){
 				//intentActivity = new Intent(RoutineListActivity.this, MenuActivity.class);
 			}
 			//button exercices
-			if(v == _btnExercices){
+			else if(v == _btnExercices){
 				intentActivity = new Intent(RoutineListActivity.this, ExercicesActivity.class);
 			}
 			//button profil
-			if(v == _btnProfil){
+			else if(v == _btnProfil){
 				intentActivity = new Intent(RoutineListActivity.this, ProfilActivity.class);
 			}		
 			//button routine add
-			if(v == _btnRoutineAdd){
+			else if(v == _btnRoutineAdd){
 				intentRoutine = new Intent(RoutineListActivity.this, RoutineCreateActivity.class);
 			}
 			
@@ -105,5 +110,31 @@ public class RoutineListActivity extends Activity {
 		}
 	};
 
+	@Override
+    protected void onStart() {
+        super.onStart();
+		overridePendingTransition(R.anim.fade, R.anim.hold);
+        // The activity is about to become visible.
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // The activity has become visible (it is now "resumed").
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        // Another activity is taking focus (this activity is about to be "paused").
+    }
+    @Override
+    protected void onStop() {
+        super.onStop();
+        // The activity is no longer visible (it is now "stopped")
+    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // The activity is about to be destroyed.
+    }
 
 }
