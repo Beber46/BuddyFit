@@ -17,6 +17,7 @@ public class RoutineCreateActivity extends Activity {
 		setContentView(R.layout.activity_routine_create);
 		
 		_btnBack = (Button) findViewById(R.id.btnBack);
+		ButtonEffect.assignRed((Button)findViewById(R.id.btnSaveRoutine));
 		
 		_btnBack.setOnClickListener(new OnClickListener() {
 			

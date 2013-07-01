@@ -3,7 +3,6 @@ package fr.guimsbeber.buddyfit;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
-import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -19,6 +18,20 @@ public class ExercicesActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_exercices);
+		
+		//Effect
+		ButtonEffect.assignRed((Button)findViewById(R.id.btnTriceps));
+		ButtonEffect.assignRed((Button)findViewById(R.id.btnBiceps));
+		ButtonEffect.assignRed((Button)findViewById(R.id.btnBack));
+		ButtonEffect.assignRed((Button)findViewById(R.id.btnGlutes));
+		ButtonEffect.assignRed((Button)findViewById(R.id.btnLowerLegs));
+		ButtonEffect.assignRed((Button)findViewById(R.id.btnUpperLegs));
+		ButtonEffect.assignRed((Button)findViewById(R.id.btnAbs));
+		ButtonEffect.assignRed((Button)findViewById(R.id.btnCardio));
+		ButtonEffect.assignRed((Button)findViewById(R.id.btnChest));
+		ButtonEffect.assignRed((Button)findViewById(R.id.btnForearm));
+		ButtonEffect.assignRed((Button)findViewById(R.id.btnShoulder));
+		ButtonEffect.assignRed((Button)findViewById(R.id.btnShowAll));
 		
 		//get buttons
 		_btnRoutine 	= (Button) findViewById(R.id.btnRoutine);

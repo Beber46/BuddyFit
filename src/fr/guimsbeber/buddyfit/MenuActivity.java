@@ -3,7 +3,6 @@ package fr.guimsbeber.buddyfit;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
-import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -19,6 +18,8 @@ public class MenuActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_menu);
+
+		ButtonEffect.assignRed((Button)findViewById(R.id.btnStart));
 		
 		//get buttons
 		_btnRoutine 	= (Button) findViewById(R.id.btnRoutine);

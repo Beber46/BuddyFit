@@ -122,7 +122,7 @@
         android:layout_gravity="center">
 
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/btnSaveAndRest"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/btnred"
@@ -131,7 +131,7 @@
             android:textColor="@color/white" />
 
         <Button
-            android:id="@+id/btnSignIn"
+            android:id="@+id/btnViewHistory"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

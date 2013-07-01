@@ -17,6 +17,7 @@ public class RoutineActivity extends Activity {
 		setContentView(R.layout.activity_routine);
 		
 		_btnBack = (Button) findViewById(R.id.btnBack);
+		ButtonEffect.assignRed((Button)findViewById(R.id.btnStart));
 		
 		_btnBack.setOnClickListener(new OnClickListener() {
 			

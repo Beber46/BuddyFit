@@ -6,6 +6,7 @@ import java.util.HashMap;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
@@ -16,6 +17,9 @@ public class ExerciceAcitivty extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_exercice);
+		
+		ButtonEffect.assignRed((Button)findViewById(R.id.btnSaveAndRest));
+		ButtonEffect.assignGrey((Button)findViewById(R.id.btnViewHistory));
 		
 		//Récup list view
 		mListViewTest = (ListView) findViewById(R.id.lvExercice);
