@@ -17,17 +17,8 @@
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_centerInParent="true"
-            android:background="@drawable/logotitle" />
+            android:background="@drawable/buddybuild" />
 
-
-        <Button
-            android:id="@+id/btnGoPro"
-            android:layout_width="75dp"
-            android:layout_height="30dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:text="@string/gopro"
-            android:background="@drawable/btnred" />
     </RelativeLayout>
 
     <LinearLayout

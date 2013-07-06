@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_centerInParent="true"
-            android:background="@drawable/logotitle" />
+            android:background="@drawable/buddybuild" />
 
         <Button
             android:id="@+id/btnBack"
@@ -33,10 +33,12 @@
         <Button
             android:id="@+id/btnGoPro"
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
+            android:layout_height="25dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ivLogo"
             android:background="@drawable/message" />
+
     </RelativeLayout>
     
     <RelativeLayout
