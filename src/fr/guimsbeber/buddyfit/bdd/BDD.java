@@ -113,25 +113,25 @@ public class BDD  extends SQLiteOpenHelper{
 			+CATEGORY_COLUMN_NAME+" TEXT NOT NULL, "
 			+CATEGORY_COLUMN_DESCRIPTION+" TEXT NOT NULL); ";
 	
-	/**
-	 * Partie de la creation de la table Subcategory
-	 */
-	public static final String TN_SUBCATEGORY = "SubCategory";//TN = Table Name
-	
-	public static final String SUBCATEGORY_COLUMN_ID = "ID";
-	public static final int SUBCATEGORY_NUM_ID = 0;
-	public static final String SUBCATEGORY_COLUMN_NAME = "NAME";
-	public static final int SUBCATEGORY_NUM_NAME = 1;
-	public static final String SUBCATEGORY_COLUMN_DESCRIPTION = "DESCRIPTION";
-	public static final int SUBCATEGORY_NUM_DESCRIPTION = 2;
-	public static final String SUBCATEGORY_COLUMN_ID_CATEGORY = "ID_CATEGORY";
-	public static final int SUBCATEGORY_NUM_ID_CATEGORY = 3;
-	
-	private static final String REQUETE_CREATION_SUBCATEGORY = "CREATE TABLE "+TN_SUBCATEGORY+" " +
-			"("+SUBCATEGORY_COLUMN_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, "
-			+SUBCATEGORY_COLUMN_NAME+" TEXT NOT NULL, "
-			+SUBCATEGORY_COLUMN_DESCRIPTION+" TEXT NOT NULL," +
-			SUBCATEGORY_COLUMN_ID_CATEGORY+" INTEGER NOT NULL); ";
+//	/**
+//	 * Partie de la creation de la table Subcategory
+//	 */
+//	public static final String TN_SUBCATEGORY = "SubCategory";//TN = Table Name
+//	
+//	public static final String SUBCATEGORY_COLUMN_ID = "ID";
+//	public static final int SUBCATEGORY_NUM_ID = 0;
+//	public static final String SUBCATEGORY_COLUMN_NAME = "NAME";
+//	public static final int SUBCATEGORY_NUM_NAME = 1;
+//	public static final String SUBCATEGORY_COLUMN_DESCRIPTION = "DESCRIPTION";
+//	public static final int SUBCATEGORY_NUM_DESCRIPTION = 2;
+//	public static final String SUBCATEGORY_COLUMN_ID_CATEGORY = "ID_CATEGORY";
+//	public static final int SUBCATEGORY_NUM_ID_CATEGORY = 3;
+//	
+//	private static final String REQUETE_CREATION_SUBCATEGORY = "CREATE TABLE "+TN_SUBCATEGORY+" " +
+//			"("+SUBCATEGORY_COLUMN_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, "
+//			+SUBCATEGORY_COLUMN_NAME+" TEXT NOT NULL, "
+//			+SUBCATEGORY_COLUMN_DESCRIPTION+" TEXT NOT NULL," +
+//			SUBCATEGORY_COLUMN_ID_CATEGORY+" INTEGER NOT NULL); ";
 	
 	/**
 	 * Partie de la creation de la table Exercice
@@ -144,8 +144,9 @@ public class BDD  extends SQLiteOpenHelper{
 	public static final int EXERCICE_NUM_NAME = 1;
 	public static final String EXERCICE_COLUMN_DESCRIPTION = "DESCRIPTION";
 	public static final int EXERCICE_NUM_DESCRIPTION = 2;
-	public static final String EXERCICE_COLUMN_ID_SUBCATEGORY = "ID_SUBCATEGORY";
-	public static final int EXERCICE_NUM_ID_SUBCATEGORY = 3;
+//	public static final String EXERCICE_COLUMN_ID_SUBCATEGORY = "ID_SUBCATEGORY";
+	public static final String EXERCICE_COLUMN_ID_CATEGORY = "ID_CATEGORY";
+	public static final int EXERCICE_NUM_ID_CATEGORY = 3;
 	public static final String EXERCICE_COLUMN_PICTURE = "ID_PICTURE";
 	public static final int EXERCICE_NUM_ID_PICTURE = 4;
 	
@@ -153,7 +154,7 @@ public class BDD  extends SQLiteOpenHelper{
 			"("+EXERCICE_COLUMN_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, "
 			+EXERCICE_COLUMN_NAME+" TEXT NOT NULL, "
 			+EXERCICE_COLUMN_DESCRIPTION+" TEXT NOT NULL," +
-			EXERCICE_COLUMN_ID_SUBCATEGORY+" INTEGER NOT NULL," +
+			EXERCICE_COLUMN_ID_CATEGORY+" INTEGER NOT NULL," +
 			EXERCICE_COLUMN_PICTURE+" TEXT); ";
 	
 	/**
@@ -246,7 +247,7 @@ public class BDD  extends SQLiteOpenHelper{
 		db.execSQL(REQUETE_CREATION_CATEGORY);
 		
 		//CReation de la table subcategory
-		db.execSQL(REQUETE_CREATION_SUBCATEGORY);
+//		db.execSQL(REQUETE_CREATION_SUBCATEGORY);
 		
 		//Creation de la table exercice
 		db.execSQL(REQUETE_CREATION_EXERCICE);
@@ -270,7 +271,7 @@ public class BDD  extends SQLiteOpenHelper{
 	        db.execSQL("DROP TABLE " + TN_PROGRAM + ";");
 	        db.execSQL("DROP TABLE " + TN_SESSION + ";");
 	        db.execSQL("DROP TABLE " + TN_CATEGORY + ";");
-	        db.execSQL("DROP TABLE " + TN_SUBCATEGORY + ";");
+//	        db.execSQL("DROP TABLE " + TN_SUBCATEGORY + ";");
 	        db.execSQL("DROP TABLE " + TN_EXERCICE + ";");
 	        db.execSQL("DROP TABLE " + TN_OPERATION + ";");
 	        db.execSQL("DROP TABLE " + TN_SESSIONEXERCICE+ ";");

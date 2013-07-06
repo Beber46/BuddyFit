@@ -81,7 +81,7 @@ public class SessionExerciceRepo extends Repository<SessionExercice>{
 	}
 	
 	public void DeleteSessionExe(int idE,int idS) {
-		mBDD.delete(BDD.TN_SUBCATEGORY, BDD.SESSIONEXERCICE_COLUMN_ID_EXERCICE + "=?"+BDD.SESSIONEXERCICE_COLUMN_ID_SESSION + "=?", 
+		mBDD.delete(BDD.TN_SESSION, BDD.SESSIONEXERCICE_COLUMN_ID_EXERCICE + "=?"+BDD.SESSIONEXERCICE_COLUMN_ID_SESSION + "=?", 
 				new String[]{String.valueOf(idE),String.valueOf(idS)});
 	}
 

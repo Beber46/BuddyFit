@@ -15,7 +15,7 @@ public class ExerciceRepo extends Repository<Exercice>{
 			BDD.EXERCICE_COLUMN_ID,
 			BDD.EXERCICE_COLUMN_NAME,
 			BDD.EXERCICE_COLUMN_DESCRIPTION,
-			BDD.EXERCICE_COLUMN_ID_SUBCATEGORY
+			BDD.EXERCICE_COLUMN_ID_CATEGORY
 	};
 
 	public ExerciceRepo(Context ctx){
@@ -48,7 +48,7 @@ public class ExerciceRepo extends Repository<Exercice>{
 
 		contentValues.put(BDD.EXERCICE_COLUMN_NAME, entite.getName());
 		contentValues.put(BDD.EXERCICE_COLUMN_DESCRIPTION, entite.getDescription());
-		contentValues.put(BDD.EXERCICE_COLUMN_ID_SUBCATEGORY, entite.getIdSubcategory());
+		contentValues.put(BDD.EXERCICE_COLUMN_ID_CATEGORY, entite.getIdSubcategory());
 		
 		mBDD.insert(BDD.TN_EXERCICE, null, contentValues);
 	}
@@ -62,7 +62,7 @@ public class ExerciceRepo extends Repository<Exercice>{
 
 		contentValues.put(BDD.EXERCICE_COLUMN_NAME, entite.getName());
 		contentValues.put(BDD.EXERCICE_COLUMN_DESCRIPTION, entite.getDescription());
-		contentValues.put(BDD.EXERCICE_COLUMN_ID_SUBCATEGORY, entite.getIdSubcategory());
+		contentValues.put(BDD.EXERCICE_COLUMN_ID_CATEGORY, entite.getIdSubcategory());
 		
 		mBDD.update(BDD.TN_EXERCICE, contentValues, BDD.EXERCICE_COLUMN_ID + "=?", new String[]{String.valueOf(entite.getId())});
 	}
@@ -108,7 +108,7 @@ public class ExerciceRepo extends Repository<Exercice>{
 		exec.setId(c.getInt(BDD.EXERCICE_NUM_ID));
 		exec.setName(c.getString(BDD.EXERCICE_NUM_NAME));
 		exec.setDescription(c.getString(BDD.EXERCICE_NUM_DESCRIPTION));
-		exec.setIdSubcategory(c.getInt(BDD.EXERCICE_NUM_ID_SUBCATEGORY));
+		exec.setIdSubcategory(c.getInt(BDD.EXERCICE_NUM_ID_CATEGORY));
 		
 		return exec;
 	}

@@ -5,7 +5,7 @@
     android:background="@drawable/back"
     android:orientation="vertical"
     android:weightSum="14"
-    tools:context=".ExerciceAcitivty" >
+    tools:context=".ExerciceActivity" >
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
 
         <Button
             android:id="@+id/btnBack"
-            android:layout_width="wrap_content"
+            android:layout_width="20dp"
             android:layout_height="26dp"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"

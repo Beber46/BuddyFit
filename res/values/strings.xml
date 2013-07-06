@@ -8,7 +8,21 @@
     <string name="action_settings">Settings</string>
     <string name="start">start</string>
     <string name="saveroutine">Save Routine</string>
-<!--     <string name="gopro">Go Pro!</string> -->
+    <!-- <string name="gopro">Go Pro!</string> -->
+
+	<!-- Title Exercice  -->
+	<string name="tlttriceps">Exercices : Triceps</string>
+	<string name="tltbiceps">Exercices : Biceps</string>
+	<string name="tltback">Exercices : Back</string>
+	<string name="tltglutes">Exercices : Glutes</string>
+	<string name="tltlowerleg">Exercices : Lower Leg</string>
+	<string name="tltcardio">Exercices : Cardio</string>
+	<string name="tltshoulder">Exercices : Shoulder</string>
+	<string name="tltchest">Exercices : Chest</string>
+	<string name="tltforearm">Exercices : Forearm</string>
+	<string name="tltAbs">Exercices : Abs</string>
+	<string name="tltupperleg">Exercices : Upper Leg</string>
+	<string name="tltshowall">Exercices</string>
 
     <!-- Button Activity -->
     <string name="sign_up">Sign-Up</string>
@@ -67,7 +81,7 @@
     <!--
     ************
     MESSAGE 
-    ************
+    ************
     -->
 
     <string name="email">Email</string>
@@ -97,7 +111,7 @@
     <!--
     ************
     ITEM
-    ************
+    ************
     -->
 
     <string name="title_activity_routine_list">RoutineListActivity</string>
@@ -105,5 +119,7 @@
     <string name="title_activity_routine_create">RoutineCreateActivity</string>
     <string name="title_activity_routine">RoutineActivity</string>
     <string name="title_activity_activities">ActivitiesActivity</string>
+    <string name="title_activity_list_exercice">ListExerciceActivity</string>
+    <string name="title_activity_add_exercice">AddExerciceActivity</string>
 
 </resources>

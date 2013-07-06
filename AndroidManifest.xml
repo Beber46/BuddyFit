@@ -50,7 +50,7 @@
             android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" >
         </activity>
         <activity
-            android:name="fr.guimsbeber.buddyfit.ExerciceAcitivty"
+            android:name="fr.guimsbeber.buddyfit.ExerciceActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" >
         </activity>
@@ -61,25 +61,31 @@
         </activity>
         <activity
             android:name="fr.guimsbeber.buddyfit.RoutineListActivity"
-            android:label="@string/title_activity_routine_list"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" >
         </activity>
         <activity
             android:name="fr.guimsbeber.buddyfit.RoutineCreateActivity"
-            android:label="@string/title_activity_routine_create"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" >
         </activity>
         <activity
             android:name="fr.guimsbeber.buddyfit.RoutineActivity"
-            android:label="@string/title_activity_routine"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" >
         </activity>
         <activity
             android:name="fr.guimsbeber.buddyfit.ExercicesActivity"
-            android:label="@string/title_activity_activities"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="fr.guimsbeber.buddyfit.ListExerciceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="fr.guimsbeber.buddyfit.AddExerciceActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" >
         </activity>
