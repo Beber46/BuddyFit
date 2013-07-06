@@ -5,7 +5,7 @@
     android:background="@drawable/back"
     android:orientation="vertical"
     android:weightSum="14"
-    tools:context=".ExerciceAcitivty" >
+    tools:context=".ExerciceActivity" >
 
     <RelativeLayout
         android:layout_width="match_parent"

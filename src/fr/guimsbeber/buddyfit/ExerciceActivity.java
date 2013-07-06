@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
-public class ExerciceAcitivty extends Activity {
+public class ExerciceActivity extends Activity {
 	private ListView mListViewTest;
 
 	@Override

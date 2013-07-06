@@ -3,6 +3,7 @@ package fr.guimsbeber.buddyfit;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -13,45 +14,140 @@ public class ExercicesActivity extends Activity {
 	private Button _btnActivities;
 	private Button _btnHome;
 	private Button _btnProfil;
+	
+	//boutons des muscles
+	private Button _btnTriceps;
+	private Button _btnBiceps;
+	private Button _btnBack;
+	private Button _btnGlutes;
+	private Button _btnLowerLegs;
+	private Button _btnUpperLegs;
+	private Button _btnAbs;
+	private Button _btnCardio;
+	private Button _btnChest;
+	private Button _btnForearm;
+	private Button _btnShoulder;
+	private Button _btnShowAll;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_exercices);
-		
-		//Effect
-		ButtonEffect.assignRed((Button)findViewById(R.id.btnTriceps));
-		ButtonEffect.assignRed((Button)findViewById(R.id.btnBiceps));
-		ButtonEffect.assignRed((Button)findViewById(R.id.btnBack));
-		ButtonEffect.assignRed((Button)findViewById(R.id.btnGlutes));
-		ButtonEffect.assignRed((Button)findViewById(R.id.btnLowerLegs));
-		ButtonEffect.assignRed((Button)findViewById(R.id.btnUpperLegs));
-		ButtonEffect.assignRed((Button)findViewById(R.id.btnAbs));
-		ButtonEffect.assignRed((Button)findViewById(R.id.btnCardio));
-		ButtonEffect.assignRed((Button)findViewById(R.id.btnChest));
-		ButtonEffect.assignRed((Button)findViewById(R.id.btnForearm));
-		ButtonEffect.assignRed((Button)findViewById(R.id.btnShoulder));
-		ButtonEffect.assignRed((Button)findViewById(R.id.btnShowAll));
-		
+
 		//get buttons
 		_btnRoutine 	= (Button) findViewById(R.id.btnRoutine);
 		_btnHome 		= (Button) findViewById(R.id.btnHome);
 		_btnActivities 	= (Button) findViewById(R.id.btnActivities);
 		_btnProfil 		= (Button) findViewById(R.id.btnProfil);
 
+		_btnTriceps     = (Button)findViewById(R.id.btnTriceps);
+		_btnBiceps     = (Button)findViewById(R.id.btnBiceps);
+		_btnBack     = (Button)findViewById(R.id.btnBack);
+		_btnGlutes     = (Button)findViewById(R.id.btnGlutes);
+		_btnLowerLegs     = (Button)findViewById(R.id.btnLowerLegs);
+		_btnUpperLegs     = (Button)findViewById(R.id.btnUpperLegs);
+		_btnAbs     = (Button)findViewById(R.id.btnAbs);
+		_btnCardio     = (Button)findViewById(R.id.btnCardio);
+		_btnChest     = (Button)findViewById(R.id.btnChest);
+		_btnForearm     = (Button)findViewById(R.id.btnForearm);
+		_btnShoulder     = (Button)findViewById(R.id.btnShoulder);
+		_btnShowAll     = (Button)findViewById(R.id.btnShowAll);
+
+		//Effect
 		ButtonEffect.assignGrey(_btnHome);
 		ButtonEffect.assignGrey(_btnProfil);
 		ButtonEffect.assignGrey(_btnRoutine);
 		ButtonEffect.assignGrey(_btnActivities);
+
+		ButtonEffect.assignRed(_btnTriceps);
+		ButtonEffect.assignRed(_btnBiceps);
+		ButtonEffect.assignRed(_btnBack);
+		ButtonEffect.assignRed(_btnGlutes);
+		ButtonEffect.assignRed(_btnLowerLegs);
+		ButtonEffect.assignRed(_btnUpperLegs);
+		ButtonEffect.assignRed(_btnAbs);
+		ButtonEffect.assignRed(_btnCardio);
+		ButtonEffect.assignRed(_btnChest);
+		ButtonEffect.assignRed(_btnShowAll);
+		ButtonEffect.assignRed(_btnForearm);
+		ButtonEffect.assignRed(_btnShoulder);
 		
 		//listener
 		_btnRoutine.setOnClickListener(buttonListener);
 		_btnActivities.setOnClickListener(buttonListener);
 		_btnHome.setOnClickListener(buttonListener);
 		_btnProfil.setOnClickListener(buttonListener);
+		
+		//operation sur les catégories de muscle
+		_btnTriceps.setOnClickListener(buttonCatListener);
+		_btnBiceps.setOnClickListener(buttonCatListener);
+		_btnBack.setOnClickListener(buttonCatListener);
+		_btnGlutes.setOnClickListener(buttonCatListener);
+		_btnLowerLegs.setOnClickListener(buttonCatListener);
+		_btnUpperLegs.setOnClickListener(buttonCatListener);
+		_btnAbs.setOnClickListener(buttonCatListener);
+		_btnCardio.setOnClickListener(buttonCatListener);
+		_btnChest.setOnClickListener(buttonCatListener);
+		_btnShowAll.setOnClickListener(buttonCatListener);
+		_btnForearm.setOnClickListener(buttonCatListener);
+		_btnShoulder.setOnClickListener(buttonCatListener);
 	}
 
 
+	//Catégory
+	OnClickListener buttonCatListener = new OnClickListener() {
+
+		@Override
+		public void onClick(View btn) {
+			// TODO Auto-generated method stub
+			
+			int sessionID = 0;
+			if(btn == _btnTriceps){
+				sessionID=1;
+			}
+			else if(btn == _btnChest){
+				sessionID=2;
+			}
+			else if(btn == _btnBiceps){
+				sessionID=3;
+			}
+			else if(btn == _btnBack){
+				sessionID=4;
+			}
+			else if(btn == _btnGlutes){
+				sessionID=5;
+			}
+			else if(btn == _btnLowerLegs){
+				sessionID=6;
+			}
+			else if(btn == _btnUpperLegs){
+				sessionID=7;
+			}
+			else if(btn == _btnAbs){
+				sessionID=8;
+			}
+			else if(btn == _btnCardio){
+				sessionID=9;
+			}
+			else if(btn == _btnForearm){
+				sessionID=10;
+			}
+			else if(btn == _btnShoulder){
+				sessionID=11;
+			}
+			else if(btn == _btnShowAll){
+				sessionID=12;
+			}
+			
+			Log.e("BERTRAND", "Value = "+String.valueOf(sessionID));
+			
+			Intent mIntent = new Intent(getApplicationContext(), ListExerciceActivity.class);
+			mIntent.putExtra("key_mysession",sessionID);
+			startActivity(mIntent);
+		}
+		
+	};
+	
 	OnClickListener buttonListener = new OnClickListener() {
 		
 		@Override
