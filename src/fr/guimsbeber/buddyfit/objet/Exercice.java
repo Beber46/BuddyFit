@@ -10,7 +10,18 @@ public class Exercice {
 	private String name;
 	private String picture;
 	private String description;
-	private int idSubcategory;
+	private int idCategory;
+	
+	public Exercice(){
+		
+	}
+	
+	public Exercice(int id,String name,String description,int idCategory){
+		this.setId(id);
+		this.setName(name);
+		this.setDescription(description);
+		this.setIdCategory(idCategory);
+	}
 	
 	public int getId() {
 		return id;
@@ -36,11 +47,11 @@ public class Exercice {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public int getIdSubcategory() {
-		return idSubcategory;
+	public int getIdCategory() {
+		return idCategory;
 	}
-	public void setIdSubcategory(int idSubcategory) {
-		this.idSubcategory = idSubcategory;
+	public void setIdCategory(int idSubcategory) {
+		this.idCategory = idSubcategory;
 	}
 	
 }

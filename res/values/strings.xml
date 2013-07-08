@@ -8,6 +8,7 @@
     <string name="action_settings">Settings</string>
     <string name="start">start</string>
     <string name="saveroutine">Save Routine</string>
+    <string name="saveexercice">Save Exercice</string>
     <!-- <string name="gopro">Go Pro!</string> -->
 
 	<!-- Title Exercice  -->
@@ -77,6 +78,13 @@
     <string name="description">Description</string>
     <string name="ex_summer_routine">Ex: Summer Routine</string>
     <string name="goal_routine">The goal of this routine is ...\nThe duration is...</string>
+    
+    <!-- Create exercice -->
+    <string name="create_exercice">Create your exercice</string>
+    <string name="exercice_name">Workout Exercice Name</string>
+    <string name="exercice_type">Category</string>
+    <string name="ex_crunch_exercice">Ex: Crunch</string>
+    <string name="goal_exercice">(optional)The goal of this exercice is ...\nThe duration is...</string>
 
     <!--
     ************

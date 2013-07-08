@@ -135,11 +135,8 @@ public class ExercicesActivity extends Activity {
 			else if(btn == _btnShoulder){
 				sessionID=11;
 			}
-			else if(btn == _btnShowAll){
-				sessionID=12;
-			}
 			
-			Log.e("BERTRAND", "Value = "+String.valueOf(sessionID));
+			if(HomeActivity.DEBUG)Log.d(HomeActivity.TAG, "Value = "+String.valueOf(sessionID));
 			
 			Intent mIntent = new Intent(getApplicationContext(), ListExerciceActivity.class);
 			mIntent.putExtra("key_mysession",sessionID);

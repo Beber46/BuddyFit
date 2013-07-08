@@ -36,7 +36,13 @@ public class ExerciceRepo extends Repository<Exercice>{
 	public Exercice GetById(int id) {
 		Cursor c = mBDD.query(BDD.TN_EXERCICE, mColumn , String.valueOf(id), null, null, null, null);
 		
-		return ConvertCursorToObject(c);
+		return ConvertCursorToListObject(c).get(0);
+	}
+	
+	public List<Exercice> GetByCategory(int cat){
+		Cursor c = mBDD.rawQuery("SELECT * FROM "+BDD.TN_EXERCICE+" WHERE "+mColumn[3]+" = "+String.valueOf(cat)+" ",null);
+
+		return ConvertCursorToListObject(c);
 	}
 	
 	/**
@@ -48,7 +54,7 @@ public class ExerciceRepo extends Repository<Exercice>{
 
 		contentValues.put(BDD.EXERCICE_COLUMN_NAME, entite.getName());
 		contentValues.put(BDD.EXERCICE_COLUMN_DESCRIPTION, entite.getDescription());
-		contentValues.put(BDD.EXERCICE_COLUMN_ID_CATEGORY, entite.getIdSubcategory());
+		contentValues.put(BDD.EXERCICE_COLUMN_ID_CATEGORY, entite.getIdCategory());
 		
 		mBDD.insert(BDD.TN_EXERCICE, null, contentValues);
 	}
@@ -62,7 +68,7 @@ public class ExerciceRepo extends Repository<Exercice>{
 
 		contentValues.put(BDD.EXERCICE_COLUMN_NAME, entite.getName());
 		contentValues.put(BDD.EXERCICE_COLUMN_DESCRIPTION, entite.getDescription());
-		contentValues.put(BDD.EXERCICE_COLUMN_ID_CATEGORY, entite.getIdSubcategory());
+		contentValues.put(BDD.EXERCICE_COLUMN_ID_CATEGORY, entite.getIdCategory());
 		
 		mBDD.update(BDD.TN_EXERCICE, contentValues, BDD.EXERCICE_COLUMN_ID + "=?", new String[]{String.valueOf(entite.getId())});
 	}
@@ -108,7 +114,7 @@ public class ExerciceRepo extends Repository<Exercice>{
 		exec.setId(c.getInt(BDD.EXERCICE_NUM_ID));
 		exec.setName(c.getString(BDD.EXERCICE_NUM_NAME));
 		exec.setDescription(c.getString(BDD.EXERCICE_NUM_DESCRIPTION));
-		exec.setIdSubcategory(c.getInt(BDD.EXERCICE_NUM_ID_CATEGORY));
+		exec.setIdCategory(c.getInt(BDD.EXERCICE_NUM_ID_CATEGORY));
 		
 		return exec;
 	}

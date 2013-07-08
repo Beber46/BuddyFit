@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListExerciceActivity" >
+
+    <Button
+        android:id="@+id/btnEditExercice"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/contentedit" />
+
+    <TextView
+        android:id="@+id/txtVExerciceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnEditExercice"
+        android:layout_alignBottom="@+id/btnEditExercice"
+        android:layout_alignParentLeft="true"
+        android:text="Exercice Name"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>

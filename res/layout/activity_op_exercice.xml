@@ -1,16 +1,122 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".AddExerciceActivity" >
+    android:background="@drawable/back"
+    android:orientation="vertical"
+    tools:context=".OPExerciceActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/buddybuild" />
+
+        <Button
+            android:id="@+id/btnPrevious"
+            android:layout_width="13dp"
+            android:layout_height="26dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/previous"
+            android:gravity="center_vertical" />
+
+    </RelativeLayout>
 
     <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/create_exercice"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+       	android:gravity="center"
+       	android:background="@color/gris_back_create_routine" />
+
+   <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="5"
+        android:background="@color/white"
+        android:layout_marginBottom="10dp" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/exercice_name" 
+            android:textColor="@color/gris_back_create_routine"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"/>
+
+        <EditText
+            android:id="@+id/eTxtExerciceName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:hint="@string/ex_crunch_exercice" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/exercice_type" 
+            android:layout_marginTop="10dp"
+            android:textColor="@color/gris_back_create_routine"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@+id/spinCategoryExercice"/>
+
+        <Spinner
+            android:id="@+id/spinCategoryExercice"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:spinnerMode="dialog"
+            android:splitMotionEvents="true" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description" 
+            android:layout_marginTop="10dp"
+            android:textColor="@color/gris_back_create_routine"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@+id/spinCategoryExercice"/>
+
+        <EditText
+            android:id="@+id/eTxtDescriptorExercice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:inputType="textImeMultiLine"
+            android:hint="@string/goal_exercice" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSaveRoutine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_gravity="center_horizontal"
+        android:text="@string/saveexercice"
+        android:background="@drawable/btnred"/>
 
-</RelativeLayout>
+</LinearLayout>

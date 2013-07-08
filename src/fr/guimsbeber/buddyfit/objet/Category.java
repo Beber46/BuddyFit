@@ -10,6 +10,16 @@ public class Category {
 	private String name;
 	private String description;
 	
+	public Category(){
+		
+	}
+	
+	public Category(int id, String name, String desscription){
+		this.setId(id);
+		this.setName(name);
+		this.setDescription(desscription);
+	}
+	
 	public int getId() {
 		return id;
 	}

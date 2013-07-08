@@ -80,12 +80,12 @@
             android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" >
         </activity>
         <activity
-            android:name="fr.guimsbeber.buddyfit.ListExerciceActivity"
+            android:name="fr.guimsbeber.buddyfit.OPExerciceActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" >
         </activity>
         <activity
-            android:name="fr.guimsbeber.buddyfit.AddExerciceActivity"
+            android:name="fr.guimsbeber.buddyfit.ListExerciceActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" >
         </activity>
