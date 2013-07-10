@@ -16,6 +16,13 @@ public class Exercice {
 		
 	}
 	
+	public Exercice(String name,String description,int idCategory){
+		this.setId(id);
+		this.setName(name);
+		this.setDescription(description);
+		this.setIdCategory(idCategory);
+	}
+	
 	public Exercice(int id,String name,String description,int idCategory){
 		this.setId(id);
 		this.setName(name);

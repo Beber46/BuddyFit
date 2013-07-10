@@ -38,7 +38,7 @@ public class ListExerciceActivity extends Activity {
 		
 		//Récupération du sessionID
 		if (extras != null) {
-			mValueSession = extras.getInt("key_mysession");
+			mValueSession = extras.getInt("mValueSession");
 		}
 		
 		//Affichage de la liste en fonction du choix précédent
@@ -63,6 +63,7 @@ public class ListExerciceActivity extends Activity {
 				Intent mIntent = new Intent(v.getContext(), OPExerciceActivity.class);
 				mIntent.putExtra("mValueSession",mValueSession);
 				startActivity(mIntent);
+				finish();
 			}
 		});
 	}

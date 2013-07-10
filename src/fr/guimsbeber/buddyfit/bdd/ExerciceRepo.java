@@ -34,7 +34,7 @@ public class ExerciceRepo extends Repository<Exercice>{
 
 	@Override
 	public Exercice GetById(int id) {
-		Cursor c = mBDD.query(BDD.TN_EXERCICE, mColumn , String.valueOf(id), null, null, null, null);
+		Cursor c = mBDD.rawQuery("SELECT * FROM "+BDD.TN_EXERCICE+" WHERE "+mColumn[0]+" = "+String.valueOf(id)+" ",null);
 		
 		return ConvertCursorToListObject(c).get(0);
 	}

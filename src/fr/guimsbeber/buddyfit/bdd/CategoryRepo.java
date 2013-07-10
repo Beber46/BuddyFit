@@ -30,6 +30,20 @@ public class CategoryRepo extends Repository<Category>{
 		
 		return ConvertCursorToListObject(c);
 	}
+	
+	public List<String> GetAllStrings(){
+		List<String> maListe = new ArrayList<String>();
+		
+		Cursor c = mBDD.rawQuery("SELECT * FROM "+BDD.TN_CATEGORY+" ORDER BY "+mColumn[2]+" ",null);
+		if(c.getCount()!=0){
+			c.moveToFirst();
+			do{
+				maListe.add(c.getString(BDD.CATEGORY_NUM_NAME));
+			}while(c.moveToNext());
+		}
+		
+		return maListe;
+	}
 
 	@Override
 	public Category GetById(int id) {

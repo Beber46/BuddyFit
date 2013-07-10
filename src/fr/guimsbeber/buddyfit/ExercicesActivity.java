@@ -139,7 +139,7 @@ public class ExercicesActivity extends Activity {
 			if(HomeActivity.DEBUG)Log.d(HomeActivity.TAG, "Value = "+String.valueOf(sessionID));
 			
 			Intent mIntent = new Intent(getApplicationContext(), ListExerciceActivity.class);
-			mIntent.putExtra("key_mysession",sessionID);
+			mIntent.putExtra("mValueSession",sessionID);
 			startActivity(mIntent);
 		}
 		
