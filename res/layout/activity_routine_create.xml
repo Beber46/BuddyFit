@@ -137,6 +137,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="@string/saveroutine"
+        android:textColor="@android:color/white"
         android:background="@drawable/btnred"/>
 
 </LinearLayout>

@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,10 +8,11 @@
     tools:context=".ExerciceActivity" >
 
     <RelativeLayout
+        android:id="@+id/relativeLayout1"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp">
+        android:layout_marginRight="5dp" >
 
         <ImageView
             android:id="@+id/ivLogo"
@@ -30,59 +31,90 @@
             android:background="@drawable/previous"
             android:gravity="center_vertical" />
 
-        <Button
-            android:id="@+id/btnGoPro"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:background="@drawable/message" />
-    </RelativeLayout>
-	    
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_weight="1"
-        android:background="#545454"
-        android:padding="5dp" >
-
-        <TextView
-            android:id="@+id/txtExerciceName"
-            android:layout_alignParentLeft="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:text="Set 1/4 - Exercice Name"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        <Button
-            android:id="@+id/btnSignIn"
-            android:layout_width="60dp"
-            android:layout_height="25dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:background="@drawable/btngrey"
-            android:minHeight="20dp"
-            android:minWidth="40dp"
-            android:text="@string/detail"
-            android:textColor="@color/black_overlay"
-            android:textSize="12dp" />
-
+        <!-- <Button -->
+        <!-- android:id="@+id/btnGoPro" -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_height="30dp" -->
+        <!-- android:layout_alignParentRight="true" -->
+        <!-- android:layout_centerVertical="true" -->
+        <!-- android:background="@drawable/message" /> -->
     </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="6"
+        android:orientation="vertical"
+        android:weightSum="1" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <Button
+            android:id="@+id/btnSaveAndRest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/btnred"
+            android:text="@string/saveandrest"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnViewHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btngrey"
+            android:text="@string/viewhistory"
+            android:textColor="@color/grisprofil" />
+    </LinearLayout>
+
+    
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_weight="1"
+        android:background="#545454"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/txtExerciceName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="Set 1/4 - Exercice Name"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </RelativeLayout>
+
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="6"
+        android:layout_alignLeft="@+id/relativeLayout2"
+        android:layout_below="@+id/relativeLayout2"
         android:weightSum="1"
         android:orientation="vertical" >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:minHeight="150dp"
             android:background="#ffffff"
-        android:padding="10dp"
+        	android:padding="10dp"
             android:orientation="vertical" >
 
             <TextView
@@ -94,7 +126,7 @@
                 android:textColor="@color/black_overlay" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/txtViewDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean laoreet urna nec ligula pulvinar sollicitudin.amet, consectetur adipiscing elit.  "
@@ -112,34 +144,6 @@
         </ListView>
 
     </LinearLayout>
-    
-    <LinearLayout
-        android:layout_width="match_parent"
-    	android:layout_height="wrap_content"
-    	android:orientation="vertical"
-        android:layout_weight="1"
-        android:padding="10dp"
-        android:layout_gravity="center">
+	
 
-        <Button
-            android:id="@+id/btnSaveAndRest"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/btnred"
-            android:layout_gravity="center"
-            android:text="@string/saveandrest"
-            android:textColor="@color/white" />
-
-        <Button
-            android:id="@+id/btnViewHistory"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/btngrey"
-            android:text="@string/viewhistory"
-            android:textColor="@color/grisprofil" />
-
-    </LinearLayout>
-
-</LinearLayout>
+</RelativeLayout>

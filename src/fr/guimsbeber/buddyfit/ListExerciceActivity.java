@@ -3,6 +3,7 @@ package fr.guimsbeber.buddyfit;
 import fr.guimsbeber.buddyfit.adapter.ExerciceListAdapter;
 import fr.guimsbeber.buddyfit.bdd.ExerciceRepo;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,13 +18,15 @@ public class ListExerciceActivity extends Activity {
 	private ListView mListViewForOneCategory;
 	private ExerciceListAdapter mAdapter;
 	private int mValueSession = 0;
+	private Context _ctx;
 
 	private ExerciceRepo mExerciceRepo;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_list_exercice);
-
+		_ctx=this;
 		mExerciceRepo = new ExerciceRepo(this);
 		TextView txtVListForCategory = (TextView)findViewById(R.id.txtVListForCategory);
 		mListViewForOneCategory = (ListView)findViewById(R.id.lvListForCategory);
@@ -142,5 +145,11 @@ public class ListExerciceActivity extends Activity {
     protected void onDestroy() {
         super.onDestroy();
         // The activity is about to be destroyed.
+    }
+    @Override
+    public void onBackPressed() {
+    	Intent mIntent = new Intent(_ctx, ExercicesActivity.class);
+		startActivity(mIntent);
+		finish();
     }
 }

@@ -3,6 +3,7 @@ package fr.guimsbeber.buddyfit.adapter;
 import java.util.List;
 
 import fr.guimsbeber.buddyfit.ButtonEffect;
+import fr.guimsbeber.buddyfit.ExerciceActivity;
 import fr.guimsbeber.buddyfit.OPExerciceActivity;
 import fr.guimsbeber.buddyfit.R;
 import fr.guimsbeber.buddyfit.objet.Exercice;
@@ -65,7 +66,7 @@ public class ExerciceListAdapter extends BaseAdapter{
 		btnEditExe.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent mIntent = new Intent(v.getContext(), OPExerciceActivity.class);
+				Intent mIntent = new Intent(v.getContext(), ExerciceActivity.class);
 				mIntent.putExtra("mExerciceID",mExercice.getId());
 				mCtx.startActivity(mIntent);
 			}

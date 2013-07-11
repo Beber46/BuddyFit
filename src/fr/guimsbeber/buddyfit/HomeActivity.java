@@ -1,18 +1,15 @@
 package fr.guimsbeber.buddyfit;
 
-import java.util.List;
-
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
+import android.view.Menu;
 import fr.guimsbeber.buddyfit.bdd.CategoryRepo;
 import fr.guimsbeber.buddyfit.bdd.ExerciceRepo;
 import fr.guimsbeber.buddyfit.objet.Category;
 import fr.guimsbeber.buddyfit.objet.Exercice;
-import android.os.Bundle;
-import android.os.Handler;
-import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
-import android.util.Log;
-import android.view.Menu;
 
 public class HomeActivity extends Activity {
 	Handler mhandler = null;

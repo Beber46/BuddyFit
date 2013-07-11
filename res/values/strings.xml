@@ -9,10 +9,12 @@
     <string name="start">start</string>
     <string name="saveroutine">Save Routine</string>
     <string name="saveexercice">Save Exercice</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_delete">Delete</string>
     
     <!-- Dialog -->
-    <string name="alertdialog_title_delete">Delete</string>
-    <string name="alertdialog_texte_sure">Are you sure?</string>
+    <string name="alertdialog_title_delete">Confirm Delete..</string>
+    <string name="alertdialog_texte_sure">This exercice will be definitly deleted?</string>
     <string name="alertdialog_yes">Yes</string>
     <string name="alertdialog_no">No</string>
     <!-- Dialog -->
@@ -88,6 +90,7 @@
     
     <!-- Create exercice -->
     <string name="create_exercice">Create your exercice</string>
+    <string name="edit_exercice">Edit your exercice</string>
     <string name="exercice_name">Workout Exercice Name</string>
     <string name="exercice_type">Category</string>
     <string name="ex_crunch_exercice">Ex: Crunch</string>

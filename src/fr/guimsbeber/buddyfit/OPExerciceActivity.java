@@ -9,6 +9,7 @@ import fr.guimsbeber.buddyfit.objet.Exercice;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -22,10 +23,12 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 public class OPExerciceActivity extends Activity implements OnItemSelectedListener{
 	
 	private Context _ctx;
+	private Dialog mDialog=null;
 	
 	//BDD
 	private ExerciceRepo mExerciceRepo;
@@ -41,6 +44,7 @@ public class OPExerciceActivity extends Activity implements OnItemSelectedListen
 	private int mPositionSpinner;
 	private int mValueSession;
 	private Button mBtnDeleteExercice;
+	private int mPreviousPage=0;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +61,7 @@ public class OPExerciceActivity extends Activity implements OnItemSelectedListen
 		mETxtDescriptorExercice = (EditText)findViewById(R.id.eTxtDescriptorExercice);
 		mSpinCategoryExercice = (Spinner)findViewById(R.id.spinCategoryExercice);
 		mBtnDeleteExercice = (Button)findViewById(R.id.btnDeleteExercice);
+		TextView txtViewTitleExercice = (TextView)findViewById(R.id.txtViewTitleExercice);
 		mExercice=null;
 
 		//Chargement
@@ -68,7 +73,11 @@ public class OPExerciceActivity extends Activity implements OnItemSelectedListen
 		Bundle extras = getIntent().getExtras();
 		if (extras != null){
 			mValueSession = extras.getInt("mValueSession");
+			mPreviousPage = extras.getInt("exerciceAct");
+			if(HomeActivity.DEBUG)Log.d(HomeActivity.TAG,"mPreviousPage = "+mPreviousPage);
 			if(extras.getInt("mExerciceID")!=0) {//s'il s'agit d'une modification
+				
+				txtViewTitleExercice.setText(R.string.edit_exercice);
 				
 				//Je rend visible le bouton delete 
 				mBtnDeleteExercice.setVisibility(View.VISIBLE);
@@ -109,9 +118,12 @@ public class OPExerciceActivity extends Activity implements OnItemSelectedListen
 	 * Modifie l'evenement lors du back (bouton ou back telephone)
 	 */
 	private void BackPressEvent(){
-		Intent mIntent = new Intent(_ctx, ListExerciceActivity.class);
-		mIntent.putExtra("mValueSession",mValueSession);
-		startActivity(mIntent);
+		Intent mIntent =null;
+		if(mPreviousPage==0){
+			mIntent= new Intent(_ctx, ListExerciceActivity.class);
+			mIntent.putExtra("mValueSession",mValueSession);
+			startActivity(mIntent);
+		}
 		finish();
 	}
 	
@@ -142,8 +154,16 @@ public class OPExerciceActivity extends Activity implements OnItemSelectedListen
 		public void onClick(View v) {
 			if(v==mBtnSaveRest){
 				mExerciceRepo.Open();
-				mExercice = new Exercice(mETxtExerciceName.getText().toString(), mETxtDescriptorExercice.getText().toString(), mPositionSpinner);
-				mExerciceRepo.Save(mExercice);
+				if(mExerciceID==0){
+					mExercice = new Exercice(mETxtExerciceName.getText().toString(), mETxtDescriptorExercice.getText().toString(), mPositionSpinner);
+					mExerciceRepo.Save(mExercice);
+				}
+				else{ //edit
+					mExercice.setName(mETxtExerciceName.getText().toString());
+					mExercice.setDescription(mETxtDescriptorExercice.getText().toString());
+					mExerciceRepo.Update(mExercice);
+				}
+					
 				mExerciceRepo.Close();
 				
 				BackPressEvent();
@@ -154,7 +174,7 @@ public class OPExerciceActivity extends Activity implements OnItemSelectedListen
 		        AlertDialog.Builder alBuilder = new AlertDialog.Builder(_ctx);
 		        alBuilder.setTitle(R.string.alertdialog_title_delete)
 		        	.setMessage(R.string.alertdialog_texte_sure)
-		        	.setIcon(android.R.drawable.ic_delete)
+		        	.setIcon(R.drawable.alertswarning)
 		        	.setPositiveButton(R.string.alertdialog_yes,
 						new DialogInterface.OnClickListener() {
 							public void onClick(DialogInterface dialog,
@@ -173,7 +193,8 @@ public class OPExerciceActivity extends Activity implements OnItemSelectedListen
 
 							}
 						});
-				
+		        
+		        mDialog = alBuilder.create();				
 				//On l'affiche
 				alBuilder.show();
 				
@@ -184,7 +205,7 @@ public class OPExerciceActivity extends Activity implements OnItemSelectedListen
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.add_exercice, menu);
+//		getMenuInflater().inflate(R.menu.op_exercice, menu);
 		return true;
 	}
 	
@@ -207,11 +228,18 @@ public class OPExerciceActivity extends Activity implements OnItemSelectedListen
     }
     @Override
     protected void onStop() {
+    	if(mDialog!=null)
+    		if(mDialog.isShowing())
+    			mDialog.dismiss();
         super.onStop();
         // The activity is no longer visible (it is now "stopped")
     }
     @Override
     protected void onDestroy() {
+    	if(mDialog!=null)
+    		if(mDialog.isShowing())
+    			mDialog.dismiss();
+    	
         super.onDestroy();
         // The activity is about to be destroyed.
     }

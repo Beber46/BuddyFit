@@ -3,8 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
-    android:background="@color/gris_back_liste">
+    android:layout_marginRight="5dp"
+    android:layout_marginLeft="5dp"
+    android:background="@color/white"
+    android:minHeight="70dp">
 
     <Button
         android:id="@+id/btnEditExercice"
@@ -12,7 +14,7 @@
         android:layout_height="40dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:background="@drawable/contentedit" />
+        android:background="@drawable/btnfledroite" />
 
     <TextView
         android:id="@+id/txtVExerciceName"
@@ -21,6 +23,7 @@
         android:layout_alignBaseline="@+id/btnEditExercice"
         android:layout_alignBottom="@+id/btnEditExercice"
         android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
         android:text="Exercice Name"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/gris_back_create_routine" />
