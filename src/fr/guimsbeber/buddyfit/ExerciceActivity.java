@@ -16,6 +16,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.textservice.TextInfo;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -65,17 +66,17 @@ public class ExerciceActivity extends Activity {
 		HashMap<String, String> map;
 
 		map = new HashMap<String, String>();
-		map.put("inf", "Reps");
+		map.put("inf", getString(R.string.infReps));
 		map.put("value", "8");
 		listItem.add(map);
 
 		map = new HashMap<String, String>();
-		map.put("inf", "Weight");
+		map.put("inf", getString(R.string.infWeight));
 		map.put("value", "25");
 		listItem.add(map);
 
 		map = new HashMap<String, String>();
-		map.put("inf", "Reset Time");
+		map.put("inf", getString(R.string.infRestTime));
 		map.put("value", "90 sec");
 		listItem.add(map);
 		

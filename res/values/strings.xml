@@ -10,7 +10,11 @@
     <string name="saveroutine">Save Routine</string>
     <string name="saveexercice">Save Exercice</string>
     <string name="action_edit">Edit</string>
+    <string name="action_new">New</string>
     <string name="action_delete">Delete</string>
+    <string name="infReps">Reps</string>
+    <string name="infWeight">Weight</string>
+    <string name="infRestTime">Reset Time</string>
     
     <!-- Dialog -->
     <string name="alertdialog_title_delete">Confirm Delete..</string>

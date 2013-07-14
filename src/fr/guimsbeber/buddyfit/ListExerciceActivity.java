@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -31,7 +32,7 @@ public class ListExerciceActivity extends Activity {
 		TextView txtVListForCategory = (TextView)findViewById(R.id.txtVListForCategory);
 		mListViewForOneCategory = (ListView)findViewById(R.id.lvListForCategory);
 		Bundle extras = getIntent().getExtras();
-		Button btnAddExercice = (Button)findViewById(R.id.btnAddExercice);
+		//Button btnAddExercice = (Button)findViewById(R.id.btnAddExercice);
 		Button btnPrevious = (Button)findViewById(R.id.btnPrevious);
 		
 		btnPrevious.setOnClickListener(new OnClickListener() {
@@ -59,7 +60,7 @@ public class ListExerciceActivity extends Activity {
 		mListViewForOneCategory.setAdapter(mAdapter);
 		registerForContextMenu(mListViewForOneCategory);
 		
-		btnAddExercice.setOnClickListener(new View.OnClickListener() {
+		/*btnAddExercice.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
@@ -68,7 +69,7 @@ public class ListExerciceActivity extends Activity {
 				startActivity(mIntent);
 				finish();
 			}
-		});
+		});*/
 	}
 
 	/**
@@ -116,8 +117,26 @@ public class ListExerciceActivity extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.menu, menu);
+		getMenuInflater().inflate(R.menu.list_exercice, menu);
 		return true;
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+	    // Handle item selection
+	    switch (item.getItemId()) {
+	        case R.id.action_new_exercice:
+	        	
+	        	Intent mIntent = new Intent(_ctx,OPExerciceActivity.class);
+				mIntent.putExtra("mValueSession",mValueSession);
+				startActivity(mIntent);
+				finish();
+	        	
+	        	return true;
+        	default :
+        		return true;
+	        	
+	    }
 	}
 	
 	@Override
